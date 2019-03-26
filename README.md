@@ -13,7 +13,4 @@ quest they have to accomplish in order to win.
 
 ## v0.1 screenshots
 <img src="Demos/v0.1_ss1.png" width="180" height="360">
-![Ss2](Demos/v0.1_ss2.png | height=360 width=180)
-![Ss2](Demos/v0.1_ss2.png = 360x180)
-![Ss1](Demos/v0.1_ss1.png){:height="360px" width="180px"} 
-![Ss2](Demos/v0.1_ss2.png){:height="360px" width="180px"}
+<img src="Demos/v0.1_ss2.png" width="180" height="360">
