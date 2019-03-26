@@ -13,5 +13,5 @@ quest they have to accomplish in order to win.
 
 ## v0.1 screenshots
 
-![Ss1](Demos/v0.1_ss1)
-![Ss2](Demos/v0.1_ss2)
+![Ss1](Demos/v0.1_ss1.png)
+![Ss2](Demos/v0.1_ss2.png)
