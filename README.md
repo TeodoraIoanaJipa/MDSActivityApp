@@ -10,3 +10,8 @@ quest they have to accomplish in order to win.
 - [ ] Input team name
 - [ ] Choose a pawn color
 - [x] Input team members
+
+## v0.1 screenshots
+
+![Ss1](Demos/v0.1_ss1)
+![Ss2](Demos/v0.1_ss2)
