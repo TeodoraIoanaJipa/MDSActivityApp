@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game_all_caps"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:background="@color/yellow1"
+        android:textSize="20sp"
+        android:padding="8sp"
+            />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assemble_team"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="5sp"
+            />
+
+    <EditText
+            android:id="@+id/text_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/add_meb_of_team"/>
+
+    <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_members"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+    />
+    <ListView
+            android:id="@+id/list_view_new_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

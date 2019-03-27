@@ -3,4 +3,8 @@
     <string name="start_playing">Start Playing</string>
     <string name="new_game">New Game</string>
     <string name="new_game_all_caps">NEW GAME</string>
+    <string name="choose_pawn">Choose the color of your pawn</string>
+    <string name="add_members">Add members</string>
+    <string name="add_meb_of_team">Add the members of the team...</string>
+    <string name="assemble_team">Assembling team</string>
 </resources>
