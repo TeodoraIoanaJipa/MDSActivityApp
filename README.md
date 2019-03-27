@@ -6,7 +6,7 @@ to play some boardgame but they don't have one. That being said the app will giv
 organise into teams, will manage the progress of each team and each team member and also will generate them the 
 quest they have to accomplish in order to win.
 
-## 'New game' feature
+## 'New game' features
 - [ ] Input team name
 - [ ] Choose a pawn color
 - [x] Input team members
