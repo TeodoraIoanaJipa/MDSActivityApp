@@ -20,7 +20,7 @@ public class NewGameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_game);
-        
+
         list_to_show = (ListView) findViewById(R.id.list_view_new_game);
         add_button = (Button) findViewById(R.id.add_button);
         text_field = (EditText) findViewById(R.id.text_field);
