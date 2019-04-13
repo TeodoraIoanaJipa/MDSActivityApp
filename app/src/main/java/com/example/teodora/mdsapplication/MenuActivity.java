@@ -14,6 +14,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private CardView new_game_btn;
     private CardView leaderboardCardView;
+    private Button testTimerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,16 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LeaderboardActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testTimerBtn = (Button) findViewById(R.id.testTimerBtn);
+
+        testTimerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
                 startActivity(intent);
             }
         });
