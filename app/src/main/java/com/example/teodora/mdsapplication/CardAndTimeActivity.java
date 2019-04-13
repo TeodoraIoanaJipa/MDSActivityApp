@@ -31,6 +31,7 @@ import java.util.Locale;
 public class CardAndTimeActivity extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 120000;
 
+
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
@@ -89,7 +90,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
         });
 
         updateCountDownText();
-
         popupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -172,6 +172,5 @@ public class CardAndTimeActivity extends AppCompatActivity {
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
     }
-
 
 }

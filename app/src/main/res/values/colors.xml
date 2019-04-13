@@ -3,6 +3,7 @@
     <color name="colorPrimary">#00BCD4</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#ed1308</color>
+
     <color name="red">#ed1308</color>
     <color name="blue">#507df7</color>
     <color name="bluu">#2F4581  </color>
@@ -13,6 +14,7 @@
     <color name="translucent_orange">#80FF8800</color>
     <color name="yellow1">#F4B400</color>
     <color name="yellow2">#ffc300</color>
+
     <color name="green">#25b102</color>
     <color name="orange">#d62d20</color>
     <color name="black">#0C0402</color>
@@ -37,4 +39,5 @@
     <color name="yellownew">#ffff66</color>
     <color name="pink">#ff757c</color>
     <color name="orange2">#ff894c</color>
+
 </resources>
