@@ -119,6 +119,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/opaque_orange"
         >
+
             <LinearLayout
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -131,6 +132,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Button"
                         android:textAlignment="center"
                         android:textSize="14sp" />
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -155,6 +157,7 @@
                 app:cardBackgroundColor="@color/blue"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -166,6 +169,7 @@
                 android:layout_marginBottom="14dp"
                 app:cardBackgroundColor="@color/pink"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -179,6 +183,7 @@
                 app:cardBackgroundColor="@color/aqua"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -190,6 +195,7 @@
                 android:layout_marginBottom="14dp"
                 app:cardBackgroundColor="@color/orange2"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -203,6 +209,7 @@
                 app:cardBackgroundColor="@color/blue"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -213,6 +220,7 @@
                 android:layout_columnWeight="1"
                 android:layout_marginBottom="12dp"
                 app:cardBackgroundColor="@color/reddd">
+
 
         </android.support.v7.widget.CardView>
 
@@ -238,6 +246,7 @@
                 app:cardBackgroundColor="@color/blue"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -249,6 +258,7 @@
                 android:layout_marginBottom="13dp"
                 app:cardBackgroundColor="@color/yellow"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -262,6 +272,7 @@
                 app:cardBackgroundColor="@color/pink"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -273,6 +284,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/orange2"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -286,6 +298,7 @@
                 app:cardBackgroundColor="@color/aqua"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -297,6 +310,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/pink"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -310,6 +324,7 @@
                 app:cardBackgroundColor="@color/orange2"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -321,6 +336,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/redd"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -334,6 +350,7 @@
                 app:cardBackgroundColor="@color/blue"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -346,6 +363,7 @@
                 app:cardBackgroundColor="@color/pink"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -357,6 +375,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/yellow"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -382,6 +401,7 @@
                 app:cardBackgroundColor="@color/pink"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -393,6 +413,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/aqua"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -406,6 +427,7 @@
                 app:cardBackgroundColor="@color/orange2"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -417,6 +439,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/blue"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -430,6 +453,7 @@
                 app:cardBackgroundColor="@color/redd"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -441,6 +465,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/orange2"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -454,6 +479,7 @@
                 app:cardBackgroundColor="@color/blue"
         >
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -465,6 +491,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/yellow"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -510,6 +537,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/pink"
         >
+
 
         </android.support.v7.widget.CardView>
 
@@ -587,6 +615,7 @@
                 app:cardBackgroundColor="@color/redd"
                 app:cardCornerRadius="1dp">
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -600,6 +629,7 @@
                 app:cardBackgroundColor="@color/aqua"
                 app:cardCornerRadius="1dp">
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -612,6 +642,7 @@
                 app:cardBackgroundColor="@color/yellow"
                 app:cardCornerRadius="1dp">
 
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -623,6 +654,7 @@
                 android:layout_marginBottom="11dp"
                 app:cardBackgroundColor="@color/redd"
                 app:cardCornerRadius="1dp">
+
 
         </android.support.v7.widget.CardView>
 
@@ -646,6 +678,7 @@
                 android:layout_marginBottom="13dp"
                 app:cardBackgroundColor="@color/yellow"
                 app:cardCornerRadius="1dp">
+
 
         </android.support.v7.widget.CardView>
 
@@ -700,6 +733,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.500">
 
+
         <android.support.v7.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -746,6 +780,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 android:textColor="@color/opaque_orange"
                 android:textSize="54sp" />
+
     </android.support.v7.widget.CardView>
 
 
