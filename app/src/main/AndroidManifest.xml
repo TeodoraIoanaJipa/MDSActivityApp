@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".newgame.NewGameActivity" />
-        <activity android:name=".leaderboard.LeaderboardActivity"></activity>
+        <activity android:name=".leaderboard.LeaderboardActivity" />
+        <activity android:name=".newgame.MapActivity"></activity>
     </application>
 
 </manifest>
