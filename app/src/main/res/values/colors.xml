@@ -3,6 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#ed1308</color>
+    <color name="red">#ed1308</color>
+    <color name="blue">#507df7</color>
     <color name="bluu">#2F4581  </color>
     <color name="opaque_orange">#FF8800</color>
     <color name="translucent_orange">#80FF8800</color>
@@ -13,5 +15,9 @@
     <color name="black">#0C0402</color>
     <color name="white">#FEFEFE</color>
     <color name="green2">#91ff01</color>
+    <color name="green3">#26b6a7</color>
+    <color name="green4">#25766d</color>
+    <color name="green5">#133834</color>
     <color name="yellow">#f2ff00</color>
+    <color name="beige">#6ccec5</color>
 </resources>
