@@ -10,40 +10,42 @@ import java.util.ArrayList;
 
 
 public class NewGameActivity extends Activity {
-    private Button add_button;
-    private EditText text_field;
-    private ListView list_to_show;
-    ArrayList<String> members_names;
-    ArrayAdapter<String> members_adapater;
+    private Button addButton;
+    private EditText textField;
+    private ListView listToShow;
+    ArrayList<String> membersNames;
+    ArrayAdapter<String> membersAdapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_game);
 
-        list_to_show = (ListView) findViewById(R.id.list_view_new_game);
-        add_button = (Button) findViewById(R.id.add_button);
-        text_field = (EditText) findViewById(R.id.text_field);
+        listToShow = (ListView) findViewById(R.id.membersListView);
+        addButton = (Button) findViewById(R.id.memberAddBtn);
+        textField = (EditText) findViewById(R.id.memberNameInp);
 
-        members_names = new ArrayList<String>();
-        members_adapater = new ArrayAdapter<String>(NewGameActivity.this,
-                android.R.layout.simple_list_item_1, members_names);
+            //declaring an adaptor for the members list view
+        membersNames = new ArrayList<String>();
+        membersAdapater = new ArrayAdapter<String>(NewGameActivity.this,
+                android.R.layout.simple_list_item_1, membersNames);
+        listToShow.setAdapter(membersAdapater);
 
-        list_to_show.setAdapter(members_adapater);
-        add_button.setOnClickListener(new View.OnClickListener() {
+            //set on click to add member into list view
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addElemInList();
+                addMemberInList();
             }
         });
     }
 
-    private void addElemInList () {
-        String member_name = text_field.getText().toString();
-        if(member_name.length() > 0) {
-            members_names.add(member_name);
-            members_adapater.notifyDataSetChanged();
-            text_field.setText("");
+    private void addMemberInList() {
+        String memberName = textField.getText().toString();
+        if(memberName.length() > 0) {
+            membersNames.add(0,memberName);
+            membersAdapater.notifyDataSetChanged();
+            textField.setText("");
         }
     }
 }

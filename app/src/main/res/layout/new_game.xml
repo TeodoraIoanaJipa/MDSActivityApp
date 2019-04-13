@@ -1,50 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOP BUTTONS -->
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/new_game_all_caps"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/black"
-        android:background="@color/yellow1"
-        android:textSize="20sp"
-        android:padding="8sp"
-            />
-
-
-
-    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/assemble_team"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:padding="5sp"
-            />
-
-    <EditText
-            android:id="@+id/text_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/add_meb_of_team"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/yellow1"
+        android:text="@string/newGameRo"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/goFurtherBtn"
+        app:layout_constraintStart_toEndOf="@+id/goBackBtn"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-            android:id="@+id/add_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_members"
-            android:layout_gravity="center"
-            android:textAllCaps="false"
-    />
-    <ListView
-            android:id="@+id/list_view_new_game"
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow2"
+        android:text="@string/backWithArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goFurtherBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow2"
+        android:text="@string/continueWithArrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TEAM NAME INPUT -->
+
+    <TextView
+        android:id="@+id/currentTeamTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="16dp"
+        android:text="Echipa 1:"
+        android:textColor="#ff0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/teamNameLay"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTeamTxt">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/teamNameInp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:hint="@string/insertTeamName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- PAWN COLORS SELECTOR -->
+    <Button
+        android:id="@+id/redPawnImg"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+
+        android:foreground="@drawable/red_pawn"
+        app:layout_constraintEnd_toStartOf="@+id/yellowPawnImg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
+
+    <Button
+        android:id="@+id/greenPawnImg"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+
+
+        android:layout_marginTop="20dp"
+        android:foreground="@drawable/green_pawn"
+
+        app:layout_constraintEnd_toStartOf="@+id/bluePawnImg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yellowPawnImg"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
+
+    <Button
+        android:id="@+id/yellowPawnImg"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+
+        android:layout_marginTop="20dp"
+        android:foreground="@drawable/yellow_pawn"
+
+        app:layout_constraintEnd_toStartOf="@+id/greenPawnImg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/redPawnImg"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
+
+    <Button
+        android:id="@+id/bluePawnImg"
+        android:layout_width="0dp"
+
+        android:layout_height="135dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+
+        android:foreground="@drawable/blue_pawn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/greenPawnImg"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
+
+    <!-- INPUT MEMBERS -->
+
+    <ListView
+        android:id="@+id/membersListView"
+        android:layout_width="395dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/membersNamesLay" />
+
+    <Button
+        android:id="@+id/memberAddBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="Adauga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluePawnImg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/membersNamesLay"
+        android:layout_width="295dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/memberAddBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redPawnImg"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/memberNameInp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/insertMemberName" />
+    </android.support.design.widget.TextInputLayout>
+
+</android.support.constraint.ConstraintLayout>
