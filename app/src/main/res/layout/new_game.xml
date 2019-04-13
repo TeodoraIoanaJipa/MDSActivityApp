@@ -111,8 +111,8 @@
         android:layout_height="135dp"
 
         android:layout_marginTop="20dp"
-        android:foreground="@drawable/yellow_pawn"
 
+        android:foreground="@drawable/yellow_pawn"
         app:layout_constraintEnd_toStartOf="@+id/greenPawnImg"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/redPawnImg"
