@@ -128,6 +128,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void startTimer() {
