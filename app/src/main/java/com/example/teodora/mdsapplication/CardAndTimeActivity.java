@@ -1,10 +1,12 @@
 package com.example.teodora.mdsapplication;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -17,6 +19,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private Button mButtonStartPause;
     private Button mButtonReset;
     private Button doneButton;
+    private ImageButton popupBtn;
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -33,6 +36,8 @@ public class CardAndTimeActivity extends AppCompatActivity {
         mButtonStartPause = findViewById(R.id.startBtn);
 
         doneButton = findViewById(R.id.doneBtn);
+
+        popupBtn = findViewById(R.id.popUpBtn);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +67,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
         });
 
         updateCountDownText();
+
+        popupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Pop.clas));
+            }
+        })
     }
 
     private void startTimer() {
