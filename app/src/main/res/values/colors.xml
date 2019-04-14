@@ -29,9 +29,11 @@
     <color name="bluee">#6699ff</color>
     <color name="yelloww">#ffff00</color>
     <color name="greenn">#66ff33</color>
-    <color name="purple">#ff99ff</color>
+    <color name="purple">#F5B7F5</color>
     <color name="aqua">#00ffff</color>
     <color name="naturalgreen">#b1f200</color>
     <color name="yellownew">#ffff66</color>
+    <color name="pink">#ff757c</color>
+    <color name="orange2">#ff894c</color>
 
 </resources>

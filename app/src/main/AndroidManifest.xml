@@ -21,7 +21,9 @@
         <activity android:name=".newgame.NewGameActivity" />
         <activity android:name=".leaderboard.LeaderboardActivity" />
         <activity android:name=".newgame.MapActivity"></activity>
-
+        <activity android:name=".Pop"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
     </application>
 
 </manifest>
