@@ -3,41 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background23">
 
     <!-- TOP BUTTONS -->
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/yellow1"
-        android:text="@string/newGameRo"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/goFurtherBtn"
-        app:layout_constraintStart_toEndOf="@+id/goBackBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/goBackBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow2"
-        android:text="@string/backWithArrow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/goFurtherBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow2"
-        android:text="@string/continueWithArrow"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topContainerView"
+        android:layout_width="401dp"
+        android:layout_height="96dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/newGameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/newGameRo"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/goBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="@string/backWithArrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/goFurtherBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="@string/continueWithArrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
 
     <!-- TEAM NAME INPUT -->
 
@@ -46,15 +61,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:textSize="16dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
         android:text="Echipa 1:"
         android:textColor="#ff0000"
+
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/topContainerView" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/teamNameLay"
@@ -71,12 +90,15 @@
             android:id="@+id/teamNameInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/insertTeamName" />
+            android:focusedByDefault="false"
+            android:hint="@string/insertTeamName"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
 
     <!-- PAWN COLORS SELECTOR -->
     <Button
-        android:id="@+id/redPawnImg"
+        android:id="@+id/pawnSelectBtn1"
         android:layout_width="0dp"
         android:layout_height="135dp"
 
@@ -84,52 +106,46 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
 
-        android:foreground="@drawable/red_pawn"
-        app:layout_constraintEnd_toStartOf="@+id/yellowPawnImg"
+        app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
 
     <Button
-        android:id="@+id/greenPawnImg"
+        android:id="@+id/pawnSelectBtn3"
         android:layout_width="0dp"
         android:layout_height="135dp"
-
-
         android:layout_marginTop="20dp"
-        android:foreground="@drawable/green_pawn"
 
-        app:layout_constraintEnd_toStartOf="@+id/bluePawnImg"
+        app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn4"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/yellowPawnImg"
+        app:layout_constraintStart_toEndOf="@+id/pawnSelectBtn2"
         app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
 
     <Button
-        android:id="@+id/yellowPawnImg"
+        android:id="@+id/pawnSelectBtn2"
         android:layout_width="0dp"
         android:layout_height="135dp"
 
         android:layout_marginTop="20dp"
 
-        android:foreground="@drawable/yellow_pawn"
-        app:layout_constraintEnd_toStartOf="@+id/greenPawnImg"
+        app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/redPawnImg"
+        app:layout_constraintStart_toEndOf="@+id/pawnSelectBtn1"
         app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
 
     <Button
-        android:id="@+id/bluePawnImg"
+        android:id="@+id/pawnSelectBtn4"
         android:layout_width="0dp"
 
         android:layout_height="135dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
 
-        android:foreground="@drawable/blue_pawn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/greenPawnImg"
+        app:layout_constraintStart_toEndOf="@+id/pawnSelectBtn3"
         app:layout_constraintTop_toBottomOf="@+id/teamNameLay" />
 
     <!-- INPUT MEMBERS -->
@@ -157,11 +173,12 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="8dp"
         android:text="Adauga"
+        android:background="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bluePawnImg"
+        app:layout_constraintTop_toBottomOf="@+id/pawnSelectBtn4"
         app:layout_constraintVertical_bias="0.0" />
 
     <android.support.design.widget.TextInputLayout
@@ -175,7 +192,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/memberAddBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/redPawnImg"
+        app:layout_constraintTop_toBottomOf="@+id/pawnSelectBtn1"
         app:layout_constraintVertical_bias="0.0">
 
         <android.support.design.widget.TextInputEditText
