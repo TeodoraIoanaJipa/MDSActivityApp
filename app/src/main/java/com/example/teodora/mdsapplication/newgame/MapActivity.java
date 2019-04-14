@@ -1,9 +1,13 @@
 package com.example.teodora.mdsapplication.newgame;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.view.View;
 
 import com.example.teodora.mdsapplication.R;
+import com.example.teodora.mdsapplication.StartActivity;
 
 public class MapActivity extends AppCompatActivity {
 
@@ -11,5 +15,34 @@ public class MapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        CardView card5 = (CardView) findViewById(R.id.Card5);
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        CardView card4 = (CardView) findViewById(R.id.Card4);
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        CardView card3 = (CardView) findViewById(R.id.Card3);
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
