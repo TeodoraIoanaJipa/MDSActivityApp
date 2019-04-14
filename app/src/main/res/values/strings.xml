@@ -11,4 +11,7 @@
     <string name="backWithArrow">&#60; Inapoi</string>
     <string name="continueWithArrow">Continua &#62;</string>
     <string name="newGameRo">Joc nou</string>
+    <string name="twoTeams">Doua Echipe</string>
+    <string name="threeTeams">Trei Echipe</string>
+    <string name="fourTeams">Patru Echipe</string>
 </resources>

@@ -6,38 +6,40 @@ import java.util.Arrays;
 public class Team {
     private String teamName;
     private int pawnColor;
-    private ArrayList<String>  teamMembers;
+    private ArrayList<String> teamMembers;
 
     private int totalPoints;
     private int boardPosition;
 
     Team() {
+        teamName = "";
+        pawnColor = 0;
         teamMembers = new ArrayList<>();
-    }
-
-    public String getTeamName() {
-        return teamName;
     }
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
     }
-
-    public int getPawnColor() {
-        return pawnColor;
-    }
-
     public void setPawnColor(int pawnColor) {
         this.pawnColor = pawnColor;
     }
-
-    public ArrayList<String> getTeamMembers() {
-        return teamMembers;
-    }
-
     public void setTeamMembers(String[] teamMembers) {
         this.teamMembers.addAll(Arrays.asList(teamMembers));
     }
+
+    public String getTeamName() {
+        return teamName;
+    }
+    public int getPawnColor() {
+        return pawnColor;
+    }
+    public String[] getTeamMembers() {
+        String[] toReturn = new String[teamMembers.size()];
+        toReturn = teamMembers.toArray(toReturn);
+        return toReturn;
+    }
+
+
 
     public String pawnColorString() {
         switch (pawnColor) {
@@ -52,5 +54,17 @@ public class Team {
             default:
                 return "grey";
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(" Team name: ");
+        stringBuffer.append(teamName);
+        stringBuffer.append(" | Pawn color: ");
+        stringBuffer.append(pawnColorString());
+        stringBuffer.append(" | Number of members: ");
+        stringBuffer.append(teamMembers.size());
+        return String.valueOf(stringBuffer);
     }
 }

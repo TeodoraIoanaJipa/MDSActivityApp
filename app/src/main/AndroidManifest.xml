@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".newgame.NewGameActivity" />
+        <activity android:name=".newgame.NewGameActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".leaderboard.LeaderboardActivity"></activity>
+        <activity android:name=".newgame.TeamsNumber"/>
     </application>
 
 </manifest>
