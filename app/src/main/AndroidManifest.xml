@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CardAndTimeActivity"></activity>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,7 @@
         <activity android:name=".newgame.NewGameActivity" />
         <activity android:name=".leaderboard.LeaderboardActivity" />
         <activity android:name=".newgame.MapActivity"></activity>
+
     </application>
 
 </manifest>
