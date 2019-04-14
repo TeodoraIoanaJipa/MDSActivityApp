@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.example.teodora.mdsapplication.CardAndTimeActivity;
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.StartActivity;
 
@@ -20,26 +21,26 @@ public class MapActivity extends AppCompatActivity {
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
                 startActivity(intent);
             }
         });
 
         CardView card4 = (CardView) findViewById(R.id.Card4);
-        card5.setOnClickListener(new View.OnClickListener() {
+        card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
                 startActivity(intent);
 
             }
         });
 
         CardView card3 = (CardView) findViewById(R.id.Card3);
-        card5.setOnClickListener(new View.OnClickListener() {
+        card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
                 startActivity(intent);
             }
         });
