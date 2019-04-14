@@ -35,7 +35,9 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LeaderboardActivity.class);
                 startActivity(intent);
+
             }
         });
+
     }
 }
