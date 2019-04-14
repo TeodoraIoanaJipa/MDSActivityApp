@@ -36,15 +36,22 @@
             android:hint="@string/add_meb_of_team"/>
 
     <Button
-            android:id="@+id/add_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_members"
-            android:layout_gravity="center"
-            android:textAllCaps="false"
-    />
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/add_members"
+        android:textAllCaps="false" />
+
     <ListView
-            android:id="@+id/list_view_new_game"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+        android:id="@+id/list_view_new_game"
+        android:layout_width="match_parent"
+        android:layout_height="330dp" />
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/done"
+        android:textAllCaps="false" />
 </LinearLayout>
