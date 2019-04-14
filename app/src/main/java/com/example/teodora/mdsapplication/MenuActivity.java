@@ -14,7 +14,6 @@ public class MenuActivity extends AppCompatActivity {
 
     private CardView teamNumbersCardView;
     private CardView leaderboardCardView;
-    private Button testTimerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

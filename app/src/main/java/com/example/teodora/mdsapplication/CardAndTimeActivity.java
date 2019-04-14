@@ -26,6 +26,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import java.util.Locale;
 
 public class CardAndTimeActivity extends AppCompatActivity {
@@ -95,6 +96,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = Pop.makeIntent(getApplicationContext());
                 startActivity(intent);
+
             }
         });
 

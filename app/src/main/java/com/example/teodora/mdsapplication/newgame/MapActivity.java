@@ -42,6 +42,7 @@ public class MapActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
 
+
                 startActivity(intent);
             }
         });
