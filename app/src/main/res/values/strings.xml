@@ -6,6 +6,7 @@
     <string name="choose_pawn">Choose the color of your pawn</string>
     <string name="add_members">Add members</string>
     <string name="assemble_team">Assembling team</string>
+
     <string name="insertTeamName">Introduceti numele echipei:</string>
     <string name="insertMemberName">Introduceti un membru:</string>
     <string name="backWithArrow">&#60; Inapoi</string>
@@ -14,4 +15,9 @@
     <string name="twoTeams">Doua Echipe</string>
     <string name="threeTeams">Trei Echipe</string>
     <string name="fourTeams">Patru Echipe</string>
+
+    <string name="done">Done</string>
+    <string name="start">START</string>
+    <string name="_5">5</string>
+    <string name="todo">TODO</string>
 </resources>

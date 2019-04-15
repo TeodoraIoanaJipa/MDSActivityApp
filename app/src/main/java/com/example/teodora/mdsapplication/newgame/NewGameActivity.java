@@ -1,14 +1,18 @@
 package com.example.teodora.mdsapplication.newgame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
 import com.example.teodora.mdsapplication.R;
+
 import com.example.teodora.mdsapplication.models.AppService;
 import com.example.teodora.mdsapplication.models.Team;
+import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +26,7 @@ import java.util.Arrays;
  */
 
 public class NewGameActivity extends Activity {
+
     private static final String TAG = "NewGameActivity";
     TopView topView;
     EditText teamName;
@@ -30,6 +35,7 @@ public class NewGameActivity extends Activity {
     AppService appService;
     int currentTeamOrdinal;
     Team currentTeam;
+
 
 
     @Override
@@ -98,6 +104,7 @@ public class NewGameActivity extends Activity {
                 }
         );
     }
+
 
 
     void saveTeamInfos() {
@@ -308,8 +315,6 @@ class PawnButtons {
                 toggleBtn(3);
             }
         });
-
-
     }
 
     public int getSelectedPawn() {
