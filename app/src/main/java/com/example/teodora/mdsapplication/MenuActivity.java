@@ -5,14 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
-import com.example.teodora.mdsapplication.newgame.NewGameActivity;
+import com.example.teodora.mdsapplication.newgame.TeamsNumber;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private CardView new_game_btn;
+    private CardView teamNumbersCardView;
     private CardView leaderboardCardView;
 
     @Override
@@ -20,16 +19,16 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        new_game_btn = (CardView) findViewById(R.id.new_game_card_view);
-        new_game_btn.setOnClickListener(new View.OnClickListener() {
+        teamNumbersCardView = (CardView) findViewById(R.id.newGameCardView);
+        teamNumbersCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), NewGameActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TeamsNumber.class);
                 startActivity(intent);
             }
         });
 
-        leaderboardCardView = (CardView) findViewById(R.id.leaderboardcardView);
+        leaderboardCardView = (CardView) findViewById(R.id.leaderBoardCardView);
         leaderboardCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
