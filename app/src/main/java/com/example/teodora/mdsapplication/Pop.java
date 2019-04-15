@@ -6,9 +6,6 @@ import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 
-
-
-
 public class Pop  extends CardAndTimeActivity {
 
     public static Intent makeIntent(Context applicationContext) {
