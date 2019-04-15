@@ -54,6 +54,7 @@ public class NewGameActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        saveTeamInfos();
         PawnButtons.resetPawns();
     }
 
@@ -94,7 +95,11 @@ public class NewGameActivity extends Activity {
                     public void onClick(View v) {
                         saveTeamInfos();
                         if(currentTeamOrdinal == appService.teamsManager.getTotalTeams()){
-                            Log.d(TAG, "nextBtn.onClick: DONE WRITING");
+                            Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            onDestroy();
+                            finish();
                         } else {
                             currentTeamOrdinal += 1;
                             resetFields();
