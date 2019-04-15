@@ -21,5 +21,14 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(startMenuIntent);
             }
         });
+
+        CardView rulesCw = (CardView)findViewById(R.id.RulesCw);
+        rulesCw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startMenuIntent = new Intent(getApplicationContext(),Rules.class);
+                startActivity(startMenuIntent);
+            }
+        });
     }
 }

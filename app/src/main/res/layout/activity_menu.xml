@@ -32,7 +32,7 @@
             android:padding="13dp"
             android:layout_height="70dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="@string/new_game_all_caps"
+            android:text="Joc Nou"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="30sp" />
@@ -57,10 +57,10 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="13dp"
-            android:text="LeaderBoard"
+            android:text="Clasament"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="13dp"
-            android:text="Settings"
+            android:text="Setari"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
