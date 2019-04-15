@@ -24,6 +24,7 @@ public class Team {
         this.pawnColor = pawnColor;
     }
     public void setTeamMembers(String[] teamMembers) {
+        this.teamMembers.clear();
         this.teamMembers.addAll(Arrays.asList(teamMembers));
     }
 

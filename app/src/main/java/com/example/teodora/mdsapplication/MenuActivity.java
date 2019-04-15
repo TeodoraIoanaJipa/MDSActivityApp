@@ -11,7 +11,7 @@ import com.example.teodora.mdsapplication.newgame.TeamsNumber;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private CardView new_game_btn;
+    private CardView teamNumbersCardView;
     private CardView leaderboardCardView;
 
     @Override
@@ -19,8 +19,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        new_game_btn = (CardView) findViewById(R.id.newGameCardView);
-        new_game_btn.setOnClickListener(new View.OnClickListener() {
+        teamNumbersCardView = (CardView) findViewById(R.id.newGameCardView);
+        teamNumbersCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TeamsNumber.class);

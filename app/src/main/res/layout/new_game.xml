@@ -10,8 +10,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/topContainerView"
-        android:layout_width="401dp"
-        android:layout_height="96dp"
+        android:layout_width="401sp"
+        android:layout_height="96sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,10 +20,10 @@
             android:id="@+id/newGameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32sp"
+            android:layout_marginEnd="8sp"
             android:text="@string/newGameRo"
-            android:textSize="30dp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0"/>
 
         <Button
             android:id="@+id/goFurtherBtn"
@@ -60,28 +60,28 @@
         android:id="@+id/currentTeamTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:paddingLeft="15sp"
+        android:paddingTop="15sp"
 
-        android:paddingRight="15dp"
-        android:paddingBottom="10dp"
+        android:paddingRight="15sp"
+        android:paddingBottom="10sp"
         android:text="Echipa 1:"
         android:textColor="#ff0000"
 
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topContainerView" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/teamNameLay"
-        android:layout_width="395dp"
+        android:layout_width="395sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentTeamTxt">
@@ -99,12 +99,12 @@
     <!-- PAWN COLORS SELECTOR -->
     <Button
         android:id="@+id/pawnSelectBtn1"
-        android:layout_width="0dp"
-        android:layout_height="135dp"
+        android:layout_width="0sp"
+        android:layout_height="135sp"
 
 
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="20sp"
 
         app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -114,9 +114,9 @@
 
     <Button
         android:id="@+id/pawnSelectBtn3"
-        android:layout_width="0dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="0sp"
+        android:layout_height="135sp"
+        android:layout_marginTop="20sp"
 
         app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn4"
         app:layout_constraintHorizontal_bias="0.5"
@@ -125,10 +125,10 @@
 
     <Button
         android:id="@+id/pawnSelectBtn2"
-        android:layout_width="0dp"
-        android:layout_height="135dp"
+        android:layout_width="0sp"
+        android:layout_height="135sp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20sp"
 
         app:layout_constraintEnd_toStartOf="@+id/pawnSelectBtn3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -137,11 +137,11 @@
 
     <Button
         android:id="@+id/pawnSelectBtn4"
-        android:layout_width="0dp"
+        android:layout_width="0sp"
 
-        android:layout_height="135dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="135sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="8sp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -152,12 +152,12 @@
 
     <ListView
         android:id="@+id/membersListView"
-        android:layout_width="395dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="395sp"
+        android:layout_height="0sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginBottom="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -168,10 +168,10 @@
         android:id="@+id/memberAddBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="12sp"
+        android:layout_marginBottom="8sp"
         android:text="Adauga"
         android:background="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,12 +183,12 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/membersNamesLay"
-        android:layout_width="295dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="295sp"
+        android:layout_height="56sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginBottom="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/memberAddBtn"
         app:layout_constraintStart_toStartOf="parent"

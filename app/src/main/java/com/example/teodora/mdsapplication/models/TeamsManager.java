@@ -3,7 +3,7 @@ package com.example.teodora.mdsapplication.models;
 public class TeamsManager {
     private int totalTeams;
     private int existingTeams;
-    public Team[] teams;
+    private Team[] teams;
 
 
     public int getTotalTeams() { return totalTeams; }

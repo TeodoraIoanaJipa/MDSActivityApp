@@ -1,14 +1,11 @@
 package com.example.teodora.mdsapplication.newgame;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.BoringLayout;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
-import com.example.teodora.mdsapplication.MenuActivity;
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.models.AppService;
 import com.example.teodora.mdsapplication.models.Team;
@@ -41,15 +38,20 @@ public class NewGameActivity extends Activity {
         setContentView(R.layout.new_game);
 
         currentTeamOrdinal = 1;
-        variableDeclarations();
+        variableInitialisation();
+        PawnButtons.resetPawns();
         importTeamInfos();
         setBackAndNext();
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PawnButtons.resetPawns();
+    }
 
-
-    void variableDeclarations() {
+    void variableInitialisation() {
 
         appService = AppService.getInstance();
 
@@ -59,6 +61,7 @@ public class NewGameActivity extends Activity {
         teamName = findViewById(R.id.teamNameInp);
         pawnButtons = new PawnButtons(this);
         teamMembersInput = new TeamMembersInput(this);
+
     }
 
     void setBackAndNext() {
@@ -68,8 +71,10 @@ public class NewGameActivity extends Activity {
                     @Override
                     public void onClick(View v) {
                         saveTeamInfos();
-                        if(currentTeamOrdinal == 1)
+                        if(currentTeamOrdinal == 1) {
                             finish();
+                            onDestroy();
+                        }
                         else {
                             currentTeamOrdinal -= 1;
                             resetFields();
@@ -109,7 +114,7 @@ public class NewGameActivity extends Activity {
     }
 
     void resetFields() {
-        variableDeclarations();
+        variableInitialisation();
         importTeamInfos();
 
     }
@@ -210,13 +215,16 @@ class PawnButtons {
     static private int nrOfPawns;
         // keeps track of the available pawns for the player to choose from
     static private Boolean available[];
-    static {
+    static void resetPawns(){
         // made all the pawns available. Will probably make a method out of this later
         nrOfPawns = 4;
         available = new Boolean[nrOfPawns];
         for (int index = 0; index < available.length; index++) {
             available[index] = Boolean.TRUE;
         }
+    }
+    static {
+        resetPawns();
     }
         // references to the view models
     private Button pawnBtn[];
@@ -271,6 +279,8 @@ class PawnButtons {
     }
 
     void setOnClicks() {
+
+
         pawnBtn[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -303,11 +313,12 @@ class PawnButtons {
     }
 
     public int getSelectedPawn() {
-        return Integer.max(0, active);
+        return active + 1;
     }
 
-    public void setImportedPawn(final int pawn) {
-        if(pawn < 1) return;
+    public void setImportedPawn(int pawnOrdinal) {
+        if(pawnOrdinal < 1) return;
+        final int pawn = pawnOrdinal - 1;
 
         available[pawn] = Boolean.TRUE;
         pawnBtn[pawn].setClickable(true);
@@ -371,11 +382,10 @@ class TeamMembersInput {
         }
     }
 
-    boolean importMemberList(String[] memberList) {
-        if(memberList.length == 0) return false;
-        membersNames.addAll(Arrays.asList(memberList));
+    void importMemberList(String[] memberList) {
+        if(memberList.length == 0) membersNames.clear();
+        else membersNames.addAll(Arrays.asList(memberList));
         membersAdapater.notifyDataSetChanged();
-        return true;
     }
 
     public String[] getMembersList() {
