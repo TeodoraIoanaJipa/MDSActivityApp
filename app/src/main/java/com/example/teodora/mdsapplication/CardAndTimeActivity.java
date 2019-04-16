@@ -21,17 +21,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class CardAndTimeActivity extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 120000;
-
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
