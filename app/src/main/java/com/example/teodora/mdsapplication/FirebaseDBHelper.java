@@ -22,7 +22,6 @@ public class FirebaseDBHelper {
     private List<String> speakChallenges = new ArrayList<>();
     private List<String> mimeChallenges = new ArrayList<>();
 
-
     public interface DataStatus{
         void dataIsLoaded(List<String>drawChallenge,List<String> speakChallenge,
                           List<String> mimeChallenge, List<String> keys);
