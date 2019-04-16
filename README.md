@@ -16,10 +16,10 @@ quest they have to accomplish in order to win.
 
 ## v0.2 screenshots
 <table><tr>
-<th><img src="Demos/v0.3_ss4.png" width="180" height="360"></th>
-<th><img src="Demos/v0.3_ss3.png" width="180" height="360"></th>
-<th><img src="Demos/v0.3_ss2.png" width="180" height="360"></th>
 <th><img src="Demos/v0.3_ss1.png" width="180" height="360"></th>
+<th><img src="Demos/v0.3_ss2.png" width="180" height="360"></th>
+<th><img src="Demos/v0.3_ss3.png" width="180" height="360"></th>
+<th><img src="Demos/v0.3_ss4.png" width="180" height="360"></th>
 </tr></table>
 
 ## v0.2 screenshots
