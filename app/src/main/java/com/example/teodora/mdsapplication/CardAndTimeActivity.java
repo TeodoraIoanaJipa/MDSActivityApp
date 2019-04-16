@@ -25,6 +25,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+
 
     public static Intent makeIntent(Context applicationContext) {
         Intent intent = new Intent(applicationContext, CardAndTimeActivity.class);
@@ -140,11 +142,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
                     if(i<challenge.size()){
                         challenge.get(i).setText(draw);
                         i+=3;
+
                     }
                 }
 
             }
         });
+
     }
 
     private void startTimer() {
@@ -189,4 +193,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
     }
+
+
 }

@@ -26,6 +26,7 @@ public class FirebaseDBHelper {
     public interface DataStatus{
         void dataIsLoaded(List<String>drawChallenge,List<String> speakChallenge,
                           List<String> mimeChallenge, List<String> keys);
+
     }
 
     public void getChalleges(final DataStatus dataStatus){
@@ -45,6 +46,7 @@ public class FirebaseDBHelper {
                     drawChallenges.add(keyNode.getValue(String.class));
                 }
                 dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+
             }
 
             @Override
@@ -63,6 +65,7 @@ public class FirebaseDBHelper {
                     speakChallenges.add(keyNode.getValue(String.class));
                 }
                 dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+
             }
 
             @Override
@@ -80,6 +83,7 @@ public class FirebaseDBHelper {
                     mimeChallenges.add(keyNode.getValue(String.class));
                 }
                 dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+
             }
 
             @Override
