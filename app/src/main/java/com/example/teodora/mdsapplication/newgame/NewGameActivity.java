@@ -66,6 +66,7 @@ public class NewGameActivity extends Activity {
         // auxiliar classes and teamName String
         topView = new TopView(this, currentTeamOrdinal);
         teamName = findViewById(R.id.teamNameInp);
+        teamName.setText("");
         pawnButtons = new PawnButtons(this);
         teamMembersInput = new TeamMembersInput(this);
 
@@ -89,7 +90,10 @@ public class NewGameActivity extends Activity {
 
                     }
                 },
+
+
                     // nextBtn
+                //TODO: add warnings when not all the fileds are completed
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -292,34 +296,18 @@ class PawnButtons {
 
     void setOnClicks() {
 
-
-        pawnBtn[0].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleBtn(0);
-            }
-        });
-
-        pawnBtn[1].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleBtn(1);
-            }
-        });
-
-        pawnBtn[2].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleBtn(2);
-            }
-        });
-
-        pawnBtn[3].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleBtn(3);
-            }
-        });
+    for(int index = 0; index < nrOfPawns; index++ )
+        if(available[index] == Boolean.TRUE) {
+            final int finalIndex = index;
+            pawnBtn[index].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    toggleBtn(finalIndex);
+                }
+            });
+        } else {
+            pawnBtn[index].setClickable(false);
+        }
     }
 
     public int getSelectedPawn() {
@@ -361,7 +349,7 @@ class TeamMembersInput {
     listToShow = this.context.findViewById(R.id.membersListView);
     addButton = this.context.findViewById(R.id.memberAddBtn);
     textField = this.context.findViewById(R.id.memberNameInp);
-
+    textField.setText("");
         //declaring an adaptor for the members list view
     membersNames = new ArrayList<>();
     membersAdapater = new ArrayAdapter<>(context,
@@ -398,7 +386,7 @@ class TeamMembersInput {
         membersAdapater.notifyDataSetChanged();
     }
 
-    public String[] getMembersList() {
+    String[] getMembersList() {
         String elem[] = new String[membersNames.size()];
         membersNames.toArray(elem);
         return elem;

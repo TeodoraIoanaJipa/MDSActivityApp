@@ -60,7 +60,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="13dp"
-            android:text="LeaderBoard"
+            android:text="@string/leaderboard"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="13dp"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
