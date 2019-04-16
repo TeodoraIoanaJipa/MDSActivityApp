@@ -23,7 +23,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="549dp"
         android:background="@color/yellownew"
-        android:text="Challenge1"
+        android:text="@string/challenge1"
         android:textColor="@color/black" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="497dp"
         android:background="@color/aqua"
-        android:text="Challenge2"
+        android:text="@string/challenge2"
         android:textColor="@color/black" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="448dp"
         android:background="@color/greenn"
-        android:text="Challenge3"
+        android:text="@string/challenge3"
         android:textColor="@color/black" />
 
     <TextView
@@ -71,7 +71,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="396dp"
         android:background="@color/yelloww"
-        android:text="Challenge4"
+        android:text="@string/challenge4"
         android:textColor="@color/black" />
 
     <TextView
@@ -87,7 +87,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="342dp"
         android:background="@color/naturalgreen"
-        android:text="Challenge5"
+        android:text="@string/challenge5"
         android:textColor="@color/black" />
 
     <TextView
@@ -103,7 +103,7 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="290dp"
         android:background="@color/blue"
-        android:text="Challenge6"
+        android:text="@string/challenge6"
         android:textColor="@color/black" />
 
     <Button
@@ -136,7 +136,7 @@
         android:layout_marginTop="443dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="213dp"
-        android:text="00:00"
+        android:text="@string/_00_00"
         android:textSize="60sp" />
 
 

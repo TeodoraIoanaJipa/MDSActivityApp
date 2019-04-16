@@ -11,4 +11,11 @@
     <string name="start">START</string>
     <string name="_5">5</string>
     <string name="todo">TODO</string>
+    <string name="challenge1">Challenge1</string>
+    <string name="challenge6">Challenge6</string>
+    <string name="_00_00">00:00</string>
+    <string name="challenge2">Challenge2</string>
+    <string name="challenge3">Challenge3</string>
+    <string name="challenge4">Challenge4</string>
+    <string name="challenge5">Challenge5</string>
 </resources>
