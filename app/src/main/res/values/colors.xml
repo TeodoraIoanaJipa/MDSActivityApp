@@ -13,12 +13,9 @@
     <color name="black">#0C0402</color>
     <color name="white">#FEFEFE</color>
     <color name="green2">#91ff01</color>
-<<<<<<< HEAD
     <color name="yellow">#EAF106</color>
     <color name="red">#FFFF0C12</color>
     <color name="blue">#6699ff</color>
-=======
-
     <color name="green3">#26b6a7</color>
     <color name="green4">#25766d</color>
     <color name="green5">#133834</color>
@@ -26,7 +23,6 @@
     <color name="yellow3">#EAF106</color>
     <color name="redd">#FFFF0C12</color>
     <color name="bluee">#6699ff</color>
->>>>>>> The card activity - map activity are connected
     <color name="yelloww">#ffff00</color>
     <color name="greenn">#66ff33</color>
     <color name="purple">#ff99ff</color>
