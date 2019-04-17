@@ -5,8 +5,17 @@
     <string name="new_game_all_caps">NEW GAME</string>
     <string name="choose_pawn">Choose the color of your pawn</string>
     <string name="add_members">Add members</string>
-    <string name="add_meb_of_team">Add the members of the team...</string>
     <string name="assemble_team">Assembling team</string>
+
+    <string name="insertTeamName">Introduceti numele echipei:</string>
+    <string name="insertMemberName">Introduceti un membru:</string>
+    <string name="backWithArrow">&#60; Inapoi</string>
+    <string name="continueWithArrow">Continua &#62;</string>
+    <string name="newGameRo">Joc nou</string>
+    <string name="twoTeams">Doua Echipe</string>
+    <string name="threeTeams">Trei Echipe</string>
+    <string name="fourTeams">Patru Echipe</string>
+
     <string name="done">Done</string>
     <string name="start">START</string>
     <string name="_5">5</string>
