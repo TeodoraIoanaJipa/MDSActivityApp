@@ -12,7 +12,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
+        //hello
         CardView myCardView = (CardView)findViewById(R.id.CardViewStarts);
         myCardView.setOnClickListener(new View.OnClickListener() {
             @Override
