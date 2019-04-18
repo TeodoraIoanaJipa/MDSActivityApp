@@ -1,16 +1,26 @@
 <resources>
     <string name="app_name">MDSApplication</string>
-    <string name="start_playing">Start Playing</string>
-    <string name="new_game">New Game</string>
-    <string name="new_game_all_caps">NEW GAME</string>
-    <string name="choose_pawn">Choose the color of your pawn</string>
-    <string name="add_members">Add members</string>
-    <string name="add_meb_of_team">Add the members of the team...</string>
+    <string name="start_playing">Incepe jocul</string>
+    <string name="new_game">Joc nou</string>
+    <string name="new_game_all_caps">JOC NOU</string>
+    <string name="choose_pawn">Alege culoarea pionului</string>
+    <string name="add_members">Adauga membru</string>
     <string name="assemble_team">Assembling team</string>
+
+    <string name="insertTeamName">Introduceti numele echipei:</string>
+    <string name="insertMemberName">Introduceti un membru:</string>
+    <string name="backWithArrow">&#60; Inapoi</string>
+    <string name="continueWithArrow">Continua &#62;</string>
+    <string name="newGameRo">Joc nou</string>
+    <string name="twoTeams">Doua Echipe</string>
+    <string name="threeTeams">Trei Echipe</string>
+    <string name="fourTeams">Patru Echipe</string>
+
     <string name="done">Done</string>
     <string name="start">START</string>
     <string name="_5">5</string>
     <string name="todo">TODO</string>
+<<<<<<< HEAD
     <string name="challenge1">Challenge1</string>
     <string name="challenge6">Challenge6</string>
     <string name="_00_00">00:00</string>
@@ -18,4 +28,8 @@
     <string name="challenge3">Challenge3</string>
     <string name="challenge4">Challenge4</string>
     <string name="challenge5">Challenge5</string>
+=======
+    <string name="leaderboard">Clasament</string>
+    <string name="settings">Setari</string>
+>>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
 </resources>
