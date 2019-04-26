@@ -3,14 +3,24 @@ package com.example.teodora.mdsapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.newgame.MapActivity;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
@@ -21,7 +31,6 @@ import java.util.Locale;
 public class CardAndTimeActivity extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 120000;
 
-
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
@@ -30,6 +39,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+
 
     public static Intent makeIntent(Context applicationContext) {
         Intent intent = new Intent(applicationContext, CardAndTimeActivity.class);
@@ -83,8 +93,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
         popupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = Pop.makeIntent(getApplicationContext());
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),Pop.class));
             }
         });
 
@@ -106,29 +115,12 @@ public class CardAndTimeActivity extends AppCompatActivity {
 
         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
-            public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
-                                     List<String> mimeChallenge, List<String> keys) {
+            public void dataIsLoaded(List<String> drawChallenge, List<String> keys) {
                 int i=0;
-                for(String mima : mimeChallenge){
-                    if(i<challenge.size()){
-                        challenge.get(i).setText(mima);
-                        i+=3;
-                    }
-                }
-
-                i=1;
-                for(String speak : speakChallenge){
-                    if(i<challenge.size()){
-                        challenge.get(i).setText(speak);
-                        i+=3;
-                    }
-                }
-
-                i=2;
                 for(String draw : drawChallenge){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(draw);
-                        i+=3;
+                    challenge.get(i).setText(draw);
+                    i++;
                     }
                 }
 
@@ -179,4 +171,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
     }
+
+
 }
