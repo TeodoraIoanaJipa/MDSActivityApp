@@ -93,8 +93,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
         popupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = Pop.makeIntent(getApplicationContext());
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),Pop.class));
             }
         });
 

@@ -71,7 +71,7 @@ public class FirebaseDBHelper {
         MimeReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                //drawChallenges.clear();
                 List<String> keys =new ArrayList<>();
                 for (DataSnapshot keyNode: dataSnapshot.getChildren()){
                     keys.add(keyNode.getKey());
