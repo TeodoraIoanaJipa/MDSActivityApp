@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardTemplate"
@@ -11,175 +7,6 @@
     android:layout_height="match_parent"
     android:visibility="visible"
     tools:context=".CardAndTimeActivity"
-<<<<<<< HEAD
-    android:background="@drawable/cardbg"
-    >
-
-    <TextView
-        android:id="@+id/challenge1"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="549dp"
-        android:background="@color/yellownew"
-        android:text="@string/challenge1"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/challenge2"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="189dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="497dp"
-        android:background="@color/aqua"
-        android:text="@string/challenge2"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/challenge3"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="448dp"
-        android:background="@color/greenn"
-        android:text="@string/challenge3"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/challenge4"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="289dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="396dp"
-        android:background="@color/yelloww"
-        android:text="@string/challenge4"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/challenge5"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="343dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="342dp"
-        android:background="@color/naturalgreen"
-        android:text="@string/challenge5"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/challenge6"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="396dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="290dp"
-        android:background="@color/blue"
-        android:text="@string/challenge6"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/doneBtn"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="210dp"
-        android:layout_height="142dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="569dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/done_button"
-        android:text="DONE"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/timerTw"
-        android:layout_width="wrap_content"
-        android:layout_height="73dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="443dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="213dp"
-        android:text="@string/_00_00"
-        android:textSize="60sp" />
-
-
-    <Button
-        android:id="@+id/resetBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="269dp"
-        android:layout_marginTop="519dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="164dp"
-        android:text="reset"
-        android:visibility="invisible"
-        tools:visibility="visible" />
-
-    <Button
-        android:id="@+id/startBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="519dp"
-        android:layout_marginBottom="164dp"
-        android:text="start" />
-
-    <ImageButton
-        android:id="@+id/popUpBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
-</RelativeLayout>
-=======
     android:background="@drawable/cardbgg"
     android:orientation="vertical"
     >
@@ -290,7 +117,7 @@
         android:paddingBottom="15dp"
         android:orientation="vertical"
         android:gravity="bottom"
-    >
+        >
 
         <TextView
             android:id="@+id/timerTw"
@@ -341,4 +168,4 @@
     </LinearLayout>
 
 </LinearLayout>
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
+

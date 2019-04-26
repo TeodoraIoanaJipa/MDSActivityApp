@@ -6,7 +6,8 @@
     android:background="@drawable/background13"
     android:layout_height="match_parent"
     tools:context=".MenuActivity"
-    android:id="@+id/relativeLayout">
+    android:id="@+id/relativeLayout"
+    tools:ignore="MissingDefaultResource">
 
     <android.support.v7.widget.CardView
         android:id="@+id/twoTeamsCardView"

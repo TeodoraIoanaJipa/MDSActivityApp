@@ -3,47 +3,25 @@ package com.example.teodora.mdsapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.os.CountDownTimer;
-<<<<<<< HEAD
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-=======
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.newgame.MapActivity;
-<<<<<<< HEAD
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
-=======
-
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
 import java.util.Locale;
 
 public class CardAndTimeActivity extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 120000;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
@@ -53,10 +31,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
     public static Intent makeIntent(Context applicationContext) {
         Intent intent = new Intent(applicationContext, CardAndTimeActivity.class);
         return intent;
@@ -109,12 +83,8 @@ public class CardAndTimeActivity extends AppCompatActivity {
         popupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
-                startActivity(new Intent(getApplicationContext(),Pop.class));
-=======
                 Intent intent = Pop.makeIntent(getApplicationContext());
                 startActivity(intent);
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
             }
         });
 
@@ -125,7 +95,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
                 //startActivity((new Intent (getApplicationContext(), MapActivity.class)));
             }
         });
-<<<<<<< HEAD
 
         final List<String> Challenges = new ArrayList<>();
         final List<TextView> challenge = new ArrayList<>(12);
@@ -137,20 +106,35 @@ public class CardAndTimeActivity extends AppCompatActivity {
 
         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
-            public void dataIsLoaded(List<String> drawChallenge, List<String> keys) {
+            public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
+                                     List<String> mimeChallenge, List<String> keys) {
                 int i=0;
+                for(String mima : mimeChallenge){
+                    if(i<challenge.size()){
+                        challenge.get(i).setText(mima);
+                        i+=3;
+                    }
+                }
+
+                i=1;
+                for(String speak : speakChallenge){
+                    if(i<challenge.size()){
+                        challenge.get(i).setText(speak);
+                        i+=3;
+                    }
+                }
+
+                i=2;
                 for(String draw : drawChallenge){
                     if(i<challenge.size()){
-                    challenge.get(i).setText(draw);
-                    i++;
+                        challenge.get(i).setText(draw);
+                        i+=3;
                     }
                 }
 
             }
         });
 
-=======
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
     }
 
     private void startTimer() {
@@ -195,9 +179,4 @@ public class CardAndTimeActivity extends AppCompatActivity {
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
 }

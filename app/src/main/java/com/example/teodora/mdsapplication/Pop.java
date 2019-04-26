@@ -1,13 +1,5 @@
 package com.example.teodora.mdsapplication;
 
-<<<<<<< HEAD
-import android.os.Bundle;
-
-class Pop  extends CardAndTimeActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-=======
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.display.DisplayManager;
@@ -35,6 +27,5 @@ public class Pop  extends CardAndTimeActivity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int)(width*0.8), (int)(height*0.8));
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
     }
 }

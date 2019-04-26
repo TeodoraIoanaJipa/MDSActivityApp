@@ -20,16 +20,8 @@
     <string name="start">START</string>
     <string name="_5">5</string>
     <string name="todo">TODO</string>
-<<<<<<< HEAD
-    <string name="challenge1">Challenge1</string>
-    <string name="challenge6">Challenge6</string>
-    <string name="_00_00">00:00</string>
-    <string name="challenge2">Challenge2</string>
-    <string name="challenge3">Challenge3</string>
-    <string name="challenge4">Challenge4</string>
-    <string name="challenge5">Challenge5</string>
-=======
     <string name="leaderboard">Clasament</string>
     <string name="settings">Setari</string>
->>>>>>> 433233abf713c1b4f7f541b2fe2e55e6bf52de71
+    <string name="challenge5">challenge5</string>
+    <string name="challenge6">challenge6</string>
 </resources>
