@@ -62,9 +62,8 @@ public class TeamsNumber extends Activity {
     }
 
     void startNewGame() {
-        Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+        Intent intent = new Intent(getApplicationContext(), NewGameActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("CURRENT_TEAM", String.valueOf(1));
         startActivity(intent);
         finish();
     }
