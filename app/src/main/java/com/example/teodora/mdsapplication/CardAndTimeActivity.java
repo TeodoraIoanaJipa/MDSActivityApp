@@ -138,8 +138,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
                 for(String draw : drawChallenge){
                     if(i<challenge.size()){
                         challenge.get(i).setText(draw);
-                        i++;
-                        challenge.get(i).setText(draw);
                         i+=3;
                     }
                 }
