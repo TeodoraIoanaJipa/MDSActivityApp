@@ -116,12 +116,31 @@ public class CardAndTimeActivity extends AppCompatActivity {
 
         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
-            public void dataIsLoaded(List<String> drawChallenge, List<String> keys) {
+            public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
+                                     List<String> mimeChallenge, List<String> keys) {
                 int i=0;
+                for(String mima : mimeChallenge){
+                    if(i<challenge.size()){
+                        challenge.get(i).setText(mima);
+                        i+=3;
+                    }
+                }
+
+                i=1;
+                for(String speak : speakChallenge){
+                    if(i<challenge.size()){
+                        challenge.get(i).setText(speak);
+                        i+=3;
+                    }
+                }
+
+                i=2;
                 for(String draw : drawChallenge){
                     if(i<challenge.size()){
-                    challenge.get(i).setText(draw);
-                    i++;
+                        challenge.get(i).setText(draw);
+                        i++;
+                        challenge.get(i).setText(draw);
+                        i+=3;
                     }
                 }
 

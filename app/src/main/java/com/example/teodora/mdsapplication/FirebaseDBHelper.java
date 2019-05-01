@@ -23,7 +23,8 @@ public class FirebaseDBHelper {
     private List<String> mimeChallenges = new ArrayList<>();
 
     public interface DataStatus{
-        void dataIsLoaded(List<String>drawChallenge, List<String> keys);
+        void dataIsLoaded(List<String>drawChallenge,List<String> speakChallenge,
+                           List<String> mimeChallenge, List<String> keys);
     }
 
     public void getChalleges(final DataStatus dataStatus){
@@ -42,7 +43,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     drawChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(drawChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
             }
 
             @Override
@@ -60,7 +61,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     speakChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(speakChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
             }
 
             @Override
@@ -77,7 +78,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     mimeChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(mimeChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
             }
 
             @Override
