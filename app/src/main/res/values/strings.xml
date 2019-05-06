@@ -19,7 +19,18 @@
     <string name="done">Done</string>
     <string name="start">START</string>
     <string name="_5">5</string>
+
     <string name="todo">TODO</string>
     <string name="leaderboard">Clasament</string>
     <string name="settings">Setari</string>
+
+    <string name="str_challenge1">Challenge1</string>
+    <string name="str_challenge6">Challenge6</string>
+    <string name="_00_00">00:00</string>
+    <string name="str_challenge2">Challenge2</string>
+    <string name="str_challenge3">Challenge3</string>
+    <string name="str_challenge4">Challenge4</string>
+    <string name="str_challenge5">Challenge5</string>
+
+
 </resources>
