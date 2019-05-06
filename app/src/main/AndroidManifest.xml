@@ -17,7 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardAndTimeActivity"/>
         <activity android:name=".MenuActivity" />
       
         <activity android:name=".newgame.NewGameActivity"
@@ -28,6 +27,7 @@
         <activity android:name=".Pop"
             android:theme="@style/AppTheme.CustomTheme">
         </activity>
+        <activity android:name=".dynamicstuff.DynamicPainting"/>
     </application>
 
 </manifest>
