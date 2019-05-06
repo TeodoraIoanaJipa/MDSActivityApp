@@ -21,7 +21,7 @@ public class MapActivity extends AppCompatActivity {
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
+                Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,6 +41,8 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
+
+
                 startActivity(intent);
             }
         });
