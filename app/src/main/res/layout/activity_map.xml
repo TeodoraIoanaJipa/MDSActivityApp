@@ -1,548 +1,548 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/beige"
-    tools:context=".newgame.MapActivity">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/beige"
+                tools:context=".newgame.MapActivity">
 
     <GridLayout
-        android:id="@+id/gridLayout4"
-        android:layout_width="33dp"
-        android:layout_height="389dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginLeft="92dp"
-        android:layout_weight="8"
-        android:columnCount="1"
-        android:padding="1dp"
-        android:rowCount="5">
+            android:id="@+id/gridLayout4"
+            android:layout_width="33dp"
+            android:layout_height="389dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginLeft="92dp"
+            android:layout_weight="8"
+            android:columnCount="1"
+            android:padding="1dp"
+            android:rowCount="5">
 
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="5dp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="4dp">
+                android:id="@+id/element7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="4dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/redd"
-            app:cardCornerRadius="4dp">
+                android:id="@+id/element15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/redd"
+                app:cardCornerRadius="4dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="2dp"
-            app:cardBackgroundColor="@color/aqua"
-            app:cardCornerRadius="4dp">
+                android:id="@+id/element23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/aqua"
+                app:cardCornerRadius="4dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="4dp">
+                android:id="@+id/element31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="4dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element39"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginTop="0dp"
-            app:cardBackgroundColor="@color/redd"
-            app:cardCornerRadius="4dp">
+                android:id="@+id/element39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="0dp"
+                app:cardBackgroundColor="@color/redd"
+                app:cardCornerRadius="4dp">
         </android.support.v7.widget.CardView>
 
 
     </GridLayout>
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="57dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="347dp"
-        android:layout_marginTop="0dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/Card4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logopng" />
+            android:id="@+id/imageView2"
+            android:layout_width="57dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="347dp"
+            android:layout_marginTop="0dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/Card4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/logopng" />
 
     <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="255dp"
-        android:layout_height="483dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginLeft="120dp"
-        android:layout_weight="8"
-        android:columnCount="3"
-        android:padding="4dp"
-        android:rowCount="10">
+            android:id="@+id/gridLayout"
+            android:layout_width="255dp"
+            android:layout_height="483dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="8"
+            android:columnCount="3"
+            android:padding="4dp"
+            android:rowCount="10">
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element0"
-            android:layout_width="5dp"
-            android:layout_height="2dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/opaque_orange"
-            >
+                android:id="@+id/element0"
+                android:layout_width="5dp"
+                android:layout_height="2dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/opaque_orange"
+        >
             <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical">
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="START"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="START"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/yellow"
-            >
+                android:id="@+id/element1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/yellow"
+        >
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/element6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="14dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="14dp"
-            app:cardBackgroundColor="@color/aqua"
-            >
+                android:id="@+id/element6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/pink"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="14dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/aqua"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/red">
+                android:id="@+id/element8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/redd">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="13dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="13dp"
-            app:cardBackgroundColor="@color/yellow"
-            >
+                android:id="@+id/element14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="13dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="13dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="13dp"
+                app:cardBackgroundColor="@color/yellow"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="13dp"
+                app:cardBackgroundColor="@color/pink"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/aqua"
-            >
+                android:id="@+id/element16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/aqua"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/pink"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/redd"
-            >
+                android:id="@+id/element22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/redd"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/yellow"
-            >
+                android:id="@+id/element24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/pink"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/yellow"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/aqua"
-            >
+                android:id="@+id/element30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/pink"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/aqua"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/redd"
-            >
+                android:id="@+id/element32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/redd"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element38"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element37"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/yellow"
-            >
+                android:id="@+id/element38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/pink"
-            >
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/element40"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/element41"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/aqua"
-            >
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/element42"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/pink"
-            >
+                android:id="@+id/element37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/yellow"
+        >
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element46"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/orange2"
-            >
+                android:id="@+id/element36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/pink"
+        >
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/element40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/element41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/aqua"
+        >
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/element42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/pink"
+        >
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/element46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/orange2"
+        >
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:id="@+id/element45"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/redd"
-            >
+                android:id="@+id/element45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/redd"
+        >
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:id="@+id/element44"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/blue"
-            >
+                android:id="@+id/element44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/blue"
+        >
 
         </android.support.v7.widget.CardView>
 
@@ -564,87 +564,87 @@
     </GridLayout>
 
     <GridLayout
-        android:id="@+id/gridLayout3"
-        android:layout_width="33dp"
-        android:layout_height="481dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginLeft="369dp"
-        android:layout_weight="8"
-        android:columnCount="1"
-        android:padding="1dp"
-        android:rowCount="5"
-        >
+            android:id="@+id/gridLayout3"
+            android:layout_width="33dp"
+            android:layout_height="481dp"
+            android:layout_marginTop="114dp"
+            android:layout_marginLeft="369dp"
+            android:layout_weight="8"
+            android:columnCount="1"
+            android:padding="1dp"
+            android:rowCount="5"
+    >
 
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="14dp"
-            app:cardBackgroundColor="@color/redd"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/redd"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            android:layout_marginTop="2dp"
-            app:cardBackgroundColor="@color/aqua"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/aqua"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/redd"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/redd"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/element35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="11dp"
-            app:cardBackgroundColor="@color/aqua"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="11dp"
+                app:cardBackgroundColor="@color/aqua"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:id="@+id/element43"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="13dp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="1dp">
+                android:id="@+id/element43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="13dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="1dp">
 
         </android.support.v7.widget.CardView>
 
@@ -652,140 +652,140 @@
     </GridLayout>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/Card5"
-        android:layout_width="75dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="10dp">
+            android:id="@+id/Card5"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp">
 
 
         <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/appCompatImageView"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="40dp"
-            app:srcCompat="@drawable/logopng" />
+                android:id="@+id/appCompatImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="40dp"
+                app:srcCompat="@drawable/logopng" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6sp"
-            android:padding="4dp"
-            android:text="@string/_5"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/opaque_orange"
-            android:textSize="54sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp"
+                android:padding="4dp"
+                android:text="@string/_5"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/opaque_orange"
+                android:textSize="54sp" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/Card4"
-        android:layout_width="75dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.500">
+            android:id="@+id/Card4"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.500">
 
         <android.support.v7.widget.AppCompatImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="40dp"
-            app:srcCompat="@drawable/logopng" />
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="40dp"
+                app:srcCompat="@drawable/logopng" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6sp"
-            android:padding="5dp"
-            android:text="4"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/opaque_orange"
-            android:textSize="54sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp"
+                android:padding="5dp"
+                android:text="4"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/opaque_orange"
+                android:textSize="54sp" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/Card3"
-        android:layout_width="75dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="10dp">
+            android:id="@+id/Card3"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="460dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp">
 
         <android.support.v7.widget.AppCompatImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="40dp"
-            app:srcCompat="@drawable/logopng" />
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="40dp"
+                app:srcCompat="@drawable/logopng" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6sp"
-            android:padding="4dp"
-            android:text="3"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/opaque_orange"
-            android:textSize="54sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp"
+                android:padding="4dp"
+                android:text="3"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/opaque_orange"
+                android:textSize="54sp" />
     </android.support.v7.widget.CardView>
 
     <ImageView
-        android:id="@+id/element47"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="547dp"
-        android:layout_marginLeft="71dp"
-        app:srcCompat="@drawable/finishlinee"
-        android:contentDescription="TODO" />
+            android:id="@+id/element47"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="547dp"
+            android:layout_marginLeft="71dp"
+            app:srcCompat="@drawable/finishlinee"
+            android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/imagepionRed"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="34dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@drawable/pionrosu" />
+            android:id="@+id/imagepionRed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="34dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/pionrosu" />
 
     <ImageView
-        android:id="@+id/imagepionBlue"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="34dp"
-        app:srcCompat="@drawable/pionblue" />
+            android:id="@+id/imagepionBlue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="34dp"
+            app:srcCompat="@drawable/pionblue" />
 
     <ImageView
-        android:id="@+id/imagepionGreen"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="34dp"
-        app:srcCompat="@drawable/piongreen" />
+            android:id="@+id/imagepionGreen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="34dp"
+            app:srcCompat="@drawable/piongreen" />
 
     <ImageView
-        android:id="@+id/imagePionYellow"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:srcCompat="@drawable/pionyellow" />
+            android:id="@+id/imagePionYellow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:srcCompat="@drawable/pionyellow" />
 
 </RelativeLayout>

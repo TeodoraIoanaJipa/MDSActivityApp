@@ -34,7 +34,7 @@
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="154dp"
         android:visibility="visible"
-        app:cardBackgroundColor="@color/yellow2"
+        app:cardBackgroundColor="@color/yellow"
         app:cardCornerRadius="30dp"
         app:cardElevation="10dp"
         >

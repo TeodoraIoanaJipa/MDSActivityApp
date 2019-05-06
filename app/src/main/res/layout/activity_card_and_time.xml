@@ -1,169 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardTemplate"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".CardAndTimeActivity"
-    android:background="@drawable/cardbgg"
-    android:orientation="vertical"
-    >
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/cardTemplate"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:visibility="visible"
+              tools:context=".CardAndTimeActivity"
+              android:background="@drawable/cardbgg"
+              android:orientation="vertical"
+>
+
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="133dp"
-        android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/popUpBtn"
-            android:layout_width="41dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+                android:id="@+id/popUpBtn"
+                android:layout_width="41dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
 
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="More information"
-            app:layout_constraintEnd_toStartOf="@+id/logoCard"
-            app:layout_constraintHorizontal_bias="0.266"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_info_details" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="More information"
+                app:layout_constraintEnd_toStartOf="@+id/logoCard"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_info_details" />
 
         <ImageView
-            android:id="@+id/logoCard"
-            android:layout_width="258dp"
-            android:layout_height="122dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logopng" />
+                android:id="@+id/logoCard"
+                android:layout_width="258dp"
+                android:layout_height="122dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logopng" />
 
 
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="283dp"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+
+            android:layout_width="wrap_content"
+            android:layout_height="283dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
         <TextView
-            android:id="@+id/challenge1"
-            android:layout_width="315dp"
-            android:layout_height="52dp"
-            android:layout_gravity="center"
-            android:background="@color/yellow"
-            android:text="Challenge1"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge1"
+                android:layout_width="315dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@color/yellow"
+                android:text="Challenge1"
+                android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/challenge2"
-            android:layout_width="315dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:background="@color/aqua"
-            android:text="Challenge2"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge2"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@color/aqua"
+                android:text="Challenge2"
+                android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/challenge3"
-            android:layout_width="315dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:background="@color/redd"
-            android:text="Challenge3"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge3"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@color/redd"
+                android:text="Challenge3"
+                android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/challenge4"
-            android:layout_width="315dp"
-            android:layout_height="46dp"
-            android:layout_gravity="center"
-            android:background="@color/orange2"
-            android:text="Challenge4"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge4"
+                android:layout_width="315dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="@color/orange2"
+                android:text="Challenge4"
+                android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/challenge5"
-            android:layout_width="315dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:background="@color/blue"
-            android:text="Challenge5"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge5"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:text="Challenge5"
+                android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/challenge6"
-            android:layout_width="315dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="290dp"
-            android:background="@color/pink"
-            android:text="Challenge6"
-            android:textColor="@color/black" />
+                android:id="@+id/challenge6"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="290dp"
+                android:background="@color/pink"
+                android:text="Challenge6"
+                android:textColor="@color/black" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="15dp"
-        android:orientation="vertical"
-        android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:gravity="bottom"
     >
 
         <TextView
-            android:id="@+id/timerTw"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="73dp"
-            android:text="00:00"
-            android:textSize="60sp" />
+                android:id="@+id/timerTw"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="73dp"
+                android:text="00:00"
+                android:textSize="60sp" />
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <Button
-                android:id="@+id/nothingImportant"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text=""
-                android:visibility="invisible"/>
+                android:orientation="horizontal"
+                android:gravity="center">
+            <Button
+                    android:id="@+id/nothingImportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text=""
+                    android:visibility="invisible"/>
 
             <Button
-                android:id="@+id/startBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="start" />
+                    android:id="@+id/startBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="start" />
 
             <Button
-                android:id="@+id/resetBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="reset"
-                android:visibility="invisible"
-                tools:visibility="visible" />
+                    android:id="@+id/resetBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reset"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/doneBtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="210dp"
-            android:layout_height="142dp"
-            android:layout_gravity="center"
-            android:background="@drawable/done_button"
-            android:text="DONE"
-            android:textColor="@color/black" />
+                android:id="@+id/doneBtn"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="210dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:background="@drawable/done_button"
+                android:text="DONE"
+                android:textColor="@color/black" />
 
     </LinearLayout>
 
