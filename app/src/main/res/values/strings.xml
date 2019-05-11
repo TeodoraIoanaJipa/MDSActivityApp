@@ -31,6 +31,7 @@
     <string name="str_challenge3">Challenge3</string>
     <string name="str_challenge4">Challenge4</string>
     <string name="str_challenge5">Challenge5</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

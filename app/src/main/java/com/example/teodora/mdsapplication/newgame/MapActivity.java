@@ -8,7 +8,6 @@ import android.view.View;
 
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
 import com.example.teodora.mdsapplication.R;
-import com.example.teodora.mdsapplication.StartActivity;
 
 public class MapActivity extends AppCompatActivity {
 
