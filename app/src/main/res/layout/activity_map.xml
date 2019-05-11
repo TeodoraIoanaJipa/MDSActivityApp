@@ -110,7 +110,7 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element0"
-                    android:layout_width="5dp"
+                    android:layout_width="6dp"
                     android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
@@ -118,20 +118,20 @@
                     app:cardBackgroundColor="@color/opaque_orange">
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="33dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="32dp"
+                        android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="33dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="62dp"
+                        android:layout_marginLeft="61dp"
                         android:src="@drawable/pionas_verde" />
 
                     <LinearLayout
@@ -151,43 +151,92 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
-                    app:cardBackgroundColor="@color/yellow"></android.support.v7.widget.CardView>
+                    app:cardBackgroundColor="@color/yellow">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
+                </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnSpan="1"
                     android:layout_columnWeight="1"
-
                     android:layout_marginBottom="14dp"
                     app:cardBackgroundColor="@color/redd"
                     app:cardCornerRadius="1dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -195,77 +244,191 @@
                     app:cardBackgroundColor="@color/yellow"
                     app:cardCornerRadius="4dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
-                    android:layout_marginBottom="14dp"
-                    app:cardBackgroundColor="@color/pink"></android.support.v7.widget.CardView>
+                    android:layout_marginBottom="11dp"
+                    app:cardBackgroundColor="@color/pink">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
+                </android.support.v7.widget.CardView>
 
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="14dp"
                     app:cardBackgroundColor="@color/aqua">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="14dp"
                     app:cardBackgroundColor="@color/orange2">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="12dp"
                     app:cardBackgroundColor="@color/blue">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="12dp"
                     app:cardBackgroundColor="@color/redd">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="12dp"
                     app:cardBackgroundColor="@color/orange2">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -274,12 +437,28 @@
                     app:cardBackgroundColor="@color/aqua"
                     app:cardCornerRadius="1dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -287,79 +466,191 @@
                     app:cardBackgroundColor="@color/redd"
                     app:cardCornerRadius="4dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="13dp"
                     app:cardBackgroundColor="@color/blue">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="13dp"
                     app:cardBackgroundColor="@color/yellow">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="13dp"
                     app:cardBackgroundColor="@color/pink">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -367,12 +658,28 @@
                     app:cardBackgroundColor="@color/yellow"
                     app:cardCornerRadius="1dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -380,89 +687,219 @@
                     app:cardBackgroundColor="@color/aqua"
                     app:cardCornerRadius="4dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/yellow">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd"
-                    app:cardCornerRadius="1dp"></android.support.v7.widget.CardView>
+                    app:cardCornerRadius="1dp">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
+                </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element31"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -470,220 +907,509 @@
                     app:cardBackgroundColor="@color/yellow"
                     app:cardCornerRadius="4dp">
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element34"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element35"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua"
-                    app:cardCornerRadius="1dp"></android.support.v7.widget.CardView>
+                    app:cardCornerRadius="1dp">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
+                </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element38"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element37"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/yellow">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element36"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
-                    app:cardBackgroundColor="@color/pink"></android.support.v7.widget.CardView>
+                    app:cardBackgroundColor="@color/pink">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
+                </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element39"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd"
                     app:cardCornerRadius="4dp">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element40"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element41"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element42"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element43"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="6dp"
                     android:layout_rowSpan="2"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginBottom="13dp"
                     app:cardBackgroundColor="@color/yellow"
                     app:cardCornerRadius="1dp">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="59dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
 
                 <ImageView
                     android:id="@+id/element47"
                     android:layout_width="4dp"
-                    android:layout_height="1dp"
+                    android:layout_height="8dp"
                     android:layout_rowSpan="1"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:adjustViewBounds="true"
                     android:contentDescription="@string/todo"
                     app:srcCompat="@drawable/finishlinee" />
 
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element46"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/element44"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="2dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pionas_rosu" />
 
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/pionas_albastru" />
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/pionas_verde" />
                 </android.support.v7.widget.CardView>
 
             </GridLayout>
