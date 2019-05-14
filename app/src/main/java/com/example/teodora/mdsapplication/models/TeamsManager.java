@@ -2,7 +2,6 @@ package com.example.teodora.mdsapplication.models;
 
 public class TeamsManager {
     private int totalTeams;
-    private int existingTeams;
     private Team[] teams;
 
 
@@ -15,7 +14,11 @@ public class TeamsManager {
                 teams[index] = new Team();
             }
     }
-    
+
+    public Team[] getTeams() {
+        return teams;
+    }
+
     public boolean setTeam(int ordinal, Team team) {
         if (ordinal - 1 > totalTeams) return false;
         teams[ordinal - 1] = team;

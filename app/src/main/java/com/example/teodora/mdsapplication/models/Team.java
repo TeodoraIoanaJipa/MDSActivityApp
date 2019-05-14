@@ -7,7 +7,6 @@ public class Team {
     private String teamName;
     private int pawnColor;
     private ArrayList<String> teamMembers;
-
     private int totalPoints;
     private int boardPosition;
 
@@ -40,7 +39,13 @@ public class Team {
         return toReturn;
     }
 
+    public int getBoardPosition() {
+        return boardPosition;
+    }
 
+    public void setBoardPosition(int boardPosition) {
+        this.boardPosition = boardPosition;
+    }
 
     public String pawnColorString() {
         switch (pawnColor) {

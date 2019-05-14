@@ -15,6 +15,7 @@
         android:layout_marginEnd="4dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toEndOf="@+id/imagePionYellow"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logopng" />
@@ -23,24 +24,23 @@
         android:id="@+id/imagepionRed"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toStartOf="@+id/imagepionBlue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pionrosu"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/pionrosu" />
 
     <ImageView
         android:id="@+id/imagepionBlue"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toStartOf="@+id/imagepionGreen"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toEndOf="@+id/imagepionRed"
         app:layout_constraintTop_toTopOf="@+id/imagepionRed"
-        app:srcCompat="@drawable/pionblue"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/pionblue" />
 
     <ImageView
         android:id="@+id/imagepionGreen"
@@ -56,7 +56,7 @@
         android:id="@+id/imagePionYellow"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginEnd="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toEndOf="@+id/imagepionGreen"
@@ -118,17 +118,20 @@
                     app:cardBackgroundColor="@color/opaque_orange">
 
                     <ImageView
+                        android:id="@+id/element0pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element0pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element0pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="61dp"
@@ -159,17 +162,20 @@
                     app:cardBackgroundColor="@color/yellow">
 
                     <ImageView
+                        android:id="@+id/element1pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element1pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element1pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -186,17 +192,20 @@
                     app:cardBackgroundColor="@color/blue">
 
                     <ImageView
+                        android:id="@+id/element2pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element2pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element2pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -216,17 +225,20 @@
                     app:cardCornerRadius="1dp">
 
                     <ImageView
+                        android:id="@+id/element3pawn1"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element3pawn2"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="29dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element3pawn3"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="59dp"
@@ -245,17 +257,20 @@
                     app:cardCornerRadius="4dp">
 
                     <ImageView
+                        android:id="@+id/element7pawn1"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element7pawn2"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="29dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element7pawn3"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="59dp"
@@ -272,17 +287,20 @@
                     app:cardBackgroundColor="@color/pink">
 
                     <ImageView
+                        android:id="@+id/element6pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element6pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element6pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -300,17 +318,20 @@
                     app:cardBackgroundColor="@color/aqua">
 
                     <ImageView
+                        android:id="@+id/element5pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element5pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element5pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -327,17 +348,20 @@
                     app:cardBackgroundColor="@color/orange2">
 
                     <ImageView
+                        android:id="@+id/element4pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element4pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element4pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -354,17 +378,20 @@
                     app:cardBackgroundColor="@color/blue">
 
                     <ImageView
+                        android:id="@+id/element8pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element8pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element8pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -381,17 +408,20 @@
                     app:cardBackgroundColor="@color/redd">
 
                     <ImageView
+                        android:id="@+id/element9pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element9pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element9pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -408,17 +438,20 @@
                     app:cardBackgroundColor="@color/orange2">
 
                     <ImageView
+                        android:id="@+id/element10pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element10pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element10pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -438,17 +471,20 @@
                     app:cardCornerRadius="1dp">
 
                     <ImageView
+                        android:id="@+id/element11pawn1"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element11pawn2"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="29dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element11pawn3"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="59dp"
@@ -467,17 +503,20 @@
                     app:cardCornerRadius="4dp">
 
                     <ImageView
+                        android:id="@+id/element15pawn1"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element15pawn2"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="29dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element15pawn3"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="59dp"
@@ -494,17 +533,20 @@
                     app:cardBackgroundColor="@color/blue">
 
                     <ImageView
+                        android:id="@+id/element14pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element14pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element14pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -522,17 +564,20 @@
                     app:cardBackgroundColor="@color/yellow">
 
                     <ImageView
+                        android:id="@+id/element13pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element13pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element13pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -549,21 +594,25 @@
                     app:cardBackgroundColor="@color/pink">
 
                     <ImageView
+                        android:id="@+id/element12pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element12pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element12pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
                         android:src="@drawable/pionas_verde" />
+
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -576,17 +625,20 @@
                     app:cardBackgroundColor="@color/orange2">
 
                     <ImageView
+                        android:id="@+id/element16pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element16pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element16pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -603,17 +655,20 @@
                     app:cardBackgroundColor="@color/aqua">
 
                     <ImageView
+                        android:id="@+id/element17pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element17pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element17pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -630,17 +685,20 @@
                     app:cardBackgroundColor="@color/pink">
 
                     <ImageView
+                        android:id="@+id/element18pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element18pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element18pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -659,17 +717,20 @@
                     app:cardCornerRadius="1dp">
 
                     <ImageView
+                        android:id="@+id/element19pawn1"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element19pawn2"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="29dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element19pawn3"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
                         android:layout_marginTop="59dp"
@@ -715,17 +776,20 @@
                     app:cardBackgroundColor="@color/orange2">
 
                     <ImageView
+                        android:id="@+id/element22pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element22pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element22pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -742,17 +806,20 @@
                     app:cardBackgroundColor="@color/redd">
 
                     <ImageView
+                        android:id="@+id/element21pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element21pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element21pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -769,17 +836,20 @@
                     app:cardBackgroundColor="@color/blue">
 
                     <ImageView
+                        android:id="@+id/element20pawn1"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pionas_rosu" />
 
                     <ImageView
+                        android:id="@+id/element20pawn2"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="30dp"
                         android:src="@drawable/pionas_albastru" />
 
                     <ImageView
+                        android:id="@+id/element20pawn3"
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="60dp"
@@ -933,6 +1003,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -959,6 +1030,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -985,6 +1057,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1011,6 +1084,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1037,6 +1111,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1063,6 +1138,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1091,6 +1167,7 @@
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua"
                     app:cardCornerRadius="1dp">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="33dp"
@@ -1118,6 +1195,7 @@
                     android:layout_columnWeight="1"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="33dp"
@@ -1145,6 +1223,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/yellow">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1171,6 +1250,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1198,6 +1278,7 @@
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd"
                     app:cardCornerRadius="4dp">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1224,6 +1305,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1250,6 +1332,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/aqua">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1276,6 +1359,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/pink">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1304,6 +1388,7 @@
                     android:layout_marginBottom="13dp"
                     app:cardBackgroundColor="@color/yellow"
                     app:cardCornerRadius="1dp">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="33dp"
@@ -1342,6 +1427,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/orange2">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1368,6 +1454,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/redd">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1394,6 +1481,7 @@
                     android:layout_columnWeight="3"
                     android:layout_marginBottom="11dp"
                     app:cardBackgroundColor="@color/blue">
+
                     <ImageView
                         android:layout_width="33dp"
                         android:layout_height="match_parent"
@@ -1514,5 +1602,24 @@
             android:textColor="@color/opaque_orange"
             android:textSize="54sp" />
     </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewCurrentTeam"
+        android:layout_width="129dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="casual"
+        android:text="CurrentTeam"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toEndOf="@+id/imagePionYellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
 
 </android.support.constraint.ConstraintLayout>
