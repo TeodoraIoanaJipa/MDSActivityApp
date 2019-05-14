@@ -77,11 +77,9 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/teamNameLay"
-        android:layout_width="395sp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentTeamTxt">
@@ -183,21 +181,18 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/membersNamesLay"
-        android:layout_width="295sp"
-        android:layout_height="56sp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
         android:layout_marginStart="8sp"
         android:layout_marginTop="8sp"
-        android:layout_marginEnd="8sp"
-        android:layout_marginBottom="8sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toStartOf="@+id/memberAddBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pawnSelectBtn1"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/pawnSelectBtn1">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/memberNameInp"
-            android:layout_width="match_parent"
+            android:layout_width="293dp"
             android:layout_height="wrap_content"
             android:hint="@string/insertMemberName" />
     </android.support.design.widget.TextInputLayout>

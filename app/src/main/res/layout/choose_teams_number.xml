@@ -33,6 +33,7 @@
             android:padding="13dp"
             android:layout_height="70dp"
             android:fontFamily="casual"
+            android:textStyle="bold"
             android:text="@string/twoTeams"
             android:textColor="@color/yellow"
             android:textAlignment="center"
@@ -60,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="casual"
+            android:textStyle="bold"
             android:padding="13dp"
             android:text="@string/threeTeams"
             android:textAlignment="center"
@@ -88,6 +90,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="221dp"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:padding="13dp"
