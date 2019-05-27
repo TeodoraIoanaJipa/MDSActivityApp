@@ -2,6 +2,7 @@ package com.example.teodora.mdsapplication.models;
 
 public class TeamsManager {
     private int totalTeams;
+    private int currentTeam=0;
     private Team[] teams;
 
     public int getTotalTeams() { return totalTeams; }
@@ -12,6 +13,15 @@ public class TeamsManager {
             for (int index = 0; index < teams.length; index++) {
                 teams[index] = new Team();
             }
+    }
+
+    public int getCurrentTeam() {
+        return currentTeam;
+    }
+
+    public void setCurrentTeam(int currentTeam) {
+
+        this.currentTeam = currentTeam;
     }
 
     public Team[] getTeams() {

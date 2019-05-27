@@ -8,12 +8,14 @@ public class Team {
     private int pawnColor;
     private ArrayList<String> teamMembers;
     private int totalPoints;
+    private int lastPosition;
     private int boardPosition;
 
     public Team() {
         teamName = "";
         pawnColor = 0;
         boardPosition = 0;
+        lastPosition = 0;
         totalPoints = 0;
         teamMembers = new ArrayList<>();
     }

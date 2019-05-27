@@ -31,9 +31,11 @@ public class MapActivity extends AppCompatActivity {
 
         appContext = getApplicationContext();
 
-        if (getIntent().getStringExtra("caller").equals("CardAndTime")) {
-            int nr = getIntent().getIntExtra("NumarPuncte", 0);
-            continueGame(0,nr);
+        //verific daca cumva ma intorc din cardAndTimeActivity adica trebuie sa reiau jocul de unde am ramas
+        if (!(getIntent().getStringExtra("caller").equals("newgame"))) {
+            //iar cu Extra punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
+            System.out.println("Am intrat pe if");
+            continueGame();
         } else {
             initializeCards();
 
@@ -129,20 +131,24 @@ public class MapActivity extends AppCompatActivity {
         }
     }
 
-    public void continueGame(int i, int toRight){
+    public void continueGame(){
+        int i;
         System.out.println("Sunt in Continuegame");
+
         while(finished()==false){
-            if(i>=0 && i<teamsManager.getTotalTeams()) {
-                currentTeam = allTeams[i];
-                textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
+            i=teamsManager.getCurrentTeam();
+           currentTeam = allTeams[i];
+           textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
 
-                String pawnColor = allTeams[i].pawnColorString();
-                Integer currentPosition = allTeams[i].getBoardPosition();
-                setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
-                return;
-            }else
-                return;
+           String pawnColor = allTeams[i].pawnColorString();
+           Integer currentPosition = allTeams[i].getBoardPosition();
+           setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
 
+           if(i+1<=teamsManager.getTotalTeams())
+               teamsManager.setCurrentTeam(teamsManager.getCurrentTeam()+1);
+           else
+               teamsManager.setCurrentTeam(0);
+           return;
         }
     }
 
@@ -153,7 +159,7 @@ public class MapActivity extends AppCompatActivity {
 
         int i=0;
 
-        continueGame(i,0);
+        continueGame();
     }
 
     private boolean finished(){

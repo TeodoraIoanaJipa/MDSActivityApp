@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.teodora.mdsapplication.models.AppService;
+import com.example.teodora.mdsapplication.models.Team;
 import com.example.teodora.mdsapplication.newgame.MapActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -98,13 +100,14 @@ public class CardAndTimeActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //finish();
-                Integer integer = getIntent().getIntExtra("NumarPuncte",0);
-                Integer integer1 = getIntent().getIntExtra("NrEchipa",-1);
-                Intent intent=new Intent (getApplicationContext(), MapActivity.class);
-                intent.putExtra("NumarPuncte",integer);
-                intent.putExtra("caller", "CardAndTime");
-                startActivity(intent);
+                Integer points = getIntent().getIntExtra("NumarPuncte",0);
+
+                AppService appService=AppService.getInstance();
+                Team[] echipe = appService.teamsManager.getTeams();
+                Integer currentTeam = appService.teamsManager.getCurrentTeam();
+                echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
+                System.out.println("am apasat e DONE");
+                finish();
             }
         });
 
