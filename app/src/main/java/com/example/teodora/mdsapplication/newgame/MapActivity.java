@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
+import com.example.teodora.mdsapplication.Pop;
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
 import com.example.teodora.mdsapplication.models.AppService;
@@ -25,18 +26,23 @@ public class MapActivity extends AppCompatActivity {
     private Context appContext;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("------------Am intrat in onResume");
+        continueGame();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
+        System.out.println("Am intrat in onCreate");
         appContext = getApplicationContext();
 
-        //verific daca cumva ma intorc din cardAndTimeActivity adica trebuie sa reiau jocul de unde am ramas
-        if (!(getIntent().getStringExtra("caller").equals("newgame"))) {
+
             //iar cu Extra punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
-            System.out.println("Am intrat pe if");
-            continueGame();
-        } else {
+
             initializeCards();
 
             textViewCurrentTeam = findViewById(R.id.textViewCurrentTeam);
@@ -47,10 +53,11 @@ public class MapActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-        }
+        
     }
 
     private void initializeCards(){
+        System.out.println("----------Am initializat cardurile");
         CardView card5 = findViewById(R.id.Card5);
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +102,7 @@ public class MapActivity extends AppCompatActivity {
     }
 
     private void setPawnVisibility(CardView card, int position, String color, Boolean visibility) {
-
+        System.out.println("------------------Am setat vizibilitatea cardului "+position);
         String imageResource = "element" + position + "pawn";
 
         switch (color) {
@@ -124,7 +131,7 @@ public class MapActivity extends AppCompatActivity {
 
 
     private void initializeGame(){
-        for (int i = 0; i < 22; i++) {
+        for (int i = 0; i < 26; i++) {
             setPawnVisibility(cards[i], i, "red", false);
             setPawnVisibility(cards[i], i, "green", false);
             setPawnVisibility(cards[i], i, "blue", false);
