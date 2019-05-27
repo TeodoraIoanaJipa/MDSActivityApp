@@ -105,6 +105,8 @@ public class CardAndTimeActivity extends AppCompatActivity {
                 AppService appService=AppService.getInstance();
                 Team[] echipe = appService.teamsManager.getTeams();
                 Integer currentTeam = appService.teamsManager.getCurrentTeam();
+                echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
+                //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
                 echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
                 System.out.println("am apasat e DONE");
                 finish();

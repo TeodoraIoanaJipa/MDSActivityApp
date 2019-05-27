@@ -142,9 +142,12 @@ public class MapActivity extends AppCompatActivity {
 
            String pawnColor = allTeams[i].pawnColorString();
            Integer currentPosition = allTeams[i].getBoardPosition();
+           Integer lastBoardPosition = allTeams[i].getLastPosition();
+           setPawnVisibility(cards[lastBoardPosition],lastBoardPosition,pawnColor, false);
            setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
 
-           if(i+1<=teamsManager.getTotalTeams())
+
+           if(i+1<teamsManager.getTotalTeams())
                teamsManager.setCurrentTeam(teamsManager.getCurrentTeam()+1);
            else
                teamsManager.setCurrentTeam(0);

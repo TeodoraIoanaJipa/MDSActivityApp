@@ -51,6 +51,14 @@ public class Team {
         this.boardPosition = boardPosition;
     }
 
+    public int getLastPosition() {
+        return lastPosition;
+    }
+
+    public void setLastPosition(int lastPosition) {
+        this.lastPosition = lastPosition;
+    }
+
     public String pawnColorString() {
         switch (pawnColor) {
             case 1:
