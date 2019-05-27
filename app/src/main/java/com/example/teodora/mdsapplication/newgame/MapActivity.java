@@ -1,5 +1,6 @@
 package com.example.teodora.mdsapplication.newgame;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,23 +10,51 @@ import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
 import com.example.teodora.mdsapplication.R;
+import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
 import com.example.teodora.mdsapplication.models.AppService;
-import com.example.teodora.mdsapplication.models.Game;
+import com.example.teodora.mdsapplication.models.Team;
 import com.example.teodora.mdsapplication.models.TeamsManager;
 
 public class MapActivity extends AppCompatActivity {
+    private AppService appService = AppService.getInstance();
+    private TeamsManager teamsManager;
+    private Team[] allTeams;
+    private TextView textViewCurrentTeam;
+    private Team currentTeam;
+    private CardView[] cards;
+    private Context appContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        CardView card5 = (CardView) findViewById(R.id.Card5);
+        appContext = getApplicationContext();
+
+        if (getIntent().getStringExtra("caller").equals("CardAndTime")) {
+            int nr = getIntent().getIntExtra("NumarPuncte", 0);
+            continueGame(0,nr);
+        } else {
+            initializeCards();
+
+            textViewCurrentTeam = findViewById(R.id.textViewCurrentTeam);
+
+            try {
+                startPlaying();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    private void initializeCards(){
+        CardView card5 = findViewById(R.id.Card5);
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
-                intent.putExtra("NumarPuncte",5);
+                intent.putExtra("NumarPuncte", 5);
                 startActivity(intent);
             }
         });
@@ -35,7 +64,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
-                intent.putExtra("NumarPuncte",4);
+                intent.putExtra("NumarPuncte", 4);
                 startActivity(intent);
 
             }
@@ -46,28 +75,98 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
-                intent.putExtra("NumarPuncte",3);
+                intent.putExtra("NumarPuncte", 3);
                 startActivity(intent);
             }
         });
 
-        //I got the cardViews from the Map so I can use the in the game
-        CardView[] cards= new CardView[48];
+        //I got the cardViews from the Map so I can use them in the game
+        cards = new CardView[48];
         //element47 is the finish box you have to be on to win
-        for(int i=0; i<47; i++) {
+        for (int i = 0; i < 47; i++) {
             String cardID = "element" + i;
             int resID = getResources().getIdentifier(cardID, "id", getPackageName());
             cards[i] = ((CardView) findViewById(resID));
         }
+        teamsManager = appService.teamsManager;
+        allTeams = teamsManager.getTeams();
+    }
 
-        AppService appService = AppService.getInstance();
+    private void setPawnVisibility(CardView card, int position, String color, Boolean visibility) {
 
-        TextView displayCurrentTeam = findViewById(R.id.textViewCurrentTeam);
+        String imageResource = "element" + position + "pawn";
 
-        try {
-            Game game = new Game(appService.teamsManager,displayCurrentTeam,cards,getApplicationContext());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        switch (color) {
+            case "red":
+                imageResource += 1;
+                break;
+            case "blue":
+                imageResource += 2;
+                break;
+            case "green":
+                imageResource += 3;
+                break;
+            default:
+                imageResource += 1;
+                break;
+        }
+
+        int resID = card.getResources().getIdentifier(imageResource, "id", getPackageName());
+
+        if (visibility == true)
+            card.findViewById(resID).setVisibility(View.VISIBLE);
+        else
+            card.findViewById(resID).setVisibility(View.INVISIBLE);
+    }
+
+
+
+    private void initializeGame(){
+        for (int i = 0; i < 22; i++) {
+            setPawnVisibility(cards[i], i, "red", false);
+            setPawnVisibility(cards[i], i, "green", false);
+            setPawnVisibility(cards[i], i, "blue", false);
         }
     }
+
+    public void continueGame(int i, int toRight){
+        System.out.println("Sunt in Continuegame");
+        while(finished()==false){
+            if(i>=0 && i<teamsManager.getTotalTeams()) {
+                currentTeam = allTeams[i];
+                textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
+
+                String pawnColor = allTeams[i].pawnColorString();
+                Integer currentPosition = allTeams[i].getBoardPosition();
+                setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
+                return;
+            }else
+                return;
+
+        }
+    }
+
+    public void startPlaying() throws InterruptedException {
+        System.out.println("Sunt in startPlaying");
+
+        initializeGame();
+
+        int i=0;
+
+        continueGame(i,0);
+    }
+
+    private boolean finished(){
+        for(Team oneOfTheTeams : allTeams){
+            if(oneOfTheTeams.getBoardPosition()==47) {
+                Intent intent = new Intent(appContext, Congrats.class);
+                startActivity(intent);
+                Intent intent2 = new Intent(appContext, LeaderboardActivity.class);
+                //cod leaderboard
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

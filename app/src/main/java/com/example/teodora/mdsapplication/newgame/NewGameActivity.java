@@ -100,6 +100,7 @@ public class NewGameActivity extends Activity {
                         saveTeamInfos();
                         if(currentTeamOrdinal == appService.teamsManager.getTotalTeams()){
                             Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                            intent.putExtra("caller","newgame");
                             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             onDestroy();

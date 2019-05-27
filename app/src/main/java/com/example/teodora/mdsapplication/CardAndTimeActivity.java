@@ -64,14 +64,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
         doneButton = findViewById(R.id.doneBtn);
 
         popupBtn = findViewById(R.id.popUpBtn);
-        Integer integer = getIntent().getIntExtra("NumarPuncte",0);
-        doneButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //open table activity
-
-            }
-        });
 
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
@@ -101,11 +93,18 @@ public class CardAndTimeActivity extends AppCompatActivity {
             }
         });
 
+
+
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                //startActivity((new Intent (getApplicationContext(), MapActivity.class)));
+                //finish();
+                Integer integer = getIntent().getIntExtra("NumarPuncte",0);
+                Integer integer1 = getIntent().getIntExtra("NrEchipa",-1);
+                Intent intent=new Intent (getApplicationContext(), MapActivity.class);
+                intent.putExtra("NumarPuncte",integer);
+                intent.putExtra("caller", "CardAndTime");
+                startActivity(intent);
             }
         });
 
