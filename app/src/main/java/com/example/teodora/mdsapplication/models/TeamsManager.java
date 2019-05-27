@@ -4,7 +4,6 @@ public class TeamsManager {
     private int totalTeams;
     private Team[] teams;
 
-
     public int getTotalTeams() { return totalTeams; }
     public void setTotalTeams(int totalTeams) {
         

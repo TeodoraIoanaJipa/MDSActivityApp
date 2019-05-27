@@ -8,9 +8,10 @@ import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
+import com.example.teodora.mdsapplication.newgame.Congrats;
 import com.example.teodora.mdsapplication.newgame.MapActivity;
 
-public class Game {
+public class Game extends MapActivity{
 
     private TeamsManager teamsManager;
     private Team[] allTeams;
@@ -19,7 +20,7 @@ public class Game {
     private CardView[] cards;
     private Context appContext;
 
-    public Game(TeamsManager teamsManager, TextView textViewCurrentTeam, CardView[] cards, Context context) {
+    public Game(TeamsManager teamsManager, TextView textViewCurrentTeam, CardView[] cards, Context context) throws InterruptedException {
         this.textViewCurrentTeam = textViewCurrentTeam;
         this.teamsManager = teamsManager;
         this.cards = cards;
@@ -50,21 +51,37 @@ public class Game {
     }
 
 
-    public void startPlaying(){
+    public void startPlaying() throws InterruptedException {
         for (int i = 0; i < 22; i++) {
             setPawnVisibility(cards[i], i, "red", false);
             setPawnVisibility(cards[i], i, "green", false);
+            setPawnVisibility(cards[i], i, "blue", false);
         }
 
-        currentTeam = allTeams[0];
-        textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
+        System.out.println("Nr echipe: " + teamsManager.getTotalTeams());
+
+        int i=0;
+        while(finished()==false){
+            if(i>=0 && i<teamsManager.getTotalTeams()) {
+                currentTeam = allTeams[i];
+                textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
+
+                String pawnColor = allTeams[i].pawnColorString();
+                Integer currentPosition = allTeams[i].getBoardPosition();
+                setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
+                return;
+            }else
+                return;
+
+        }
     }
 
     private boolean finished(){
         for(Team oneOfTheTeams : allTeams){
             if(oneOfTheTeams.getBoardPosition()==47) {
-                System.out.println("Horrray!!! Ai castigat");
-                Intent intent = new Intent(appContext, LeaderboardActivity.class);
+                Intent intent = new Intent(appContext, Congrats.class);
+                startActivity(intent);
+                Intent intent2 = new Intent(appContext, LeaderboardActivity.class);
                 //cod leaderboard
                 return true;
             }

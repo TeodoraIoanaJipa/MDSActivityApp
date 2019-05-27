@@ -25,6 +25,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
+                intent.putExtra("NumarPuncte",5);
                 startActivity(intent);
             }
         });
@@ -34,6 +35,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
+                intent.putExtra("NumarPuncte",4);
                 startActivity(intent);
 
             }
@@ -44,8 +46,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = CardAndTimeActivity.makeIntent(getApplicationContext());
-
-
+                intent.putExtra("NumarPuncte",3);
                 startActivity(intent);
             }
         });
@@ -63,6 +64,10 @@ public class MapActivity extends AppCompatActivity {
 
         TextView displayCurrentTeam = findViewById(R.id.textViewCurrentTeam);
 
-        Game game = new Game(appService.teamsManager,displayCurrentTeam,cards,getApplicationContext());
+        try {
+            Game game = new Game(appService.teamsManager,displayCurrentTeam,cards,getApplicationContext());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

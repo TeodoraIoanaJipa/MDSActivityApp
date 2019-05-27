@@ -10,9 +10,11 @@ public class Team {
     private int totalPoints;
     private int boardPosition;
 
-    Team() {
+    public Team() {
         teamName = "";
         pawnColor = 0;
+        boardPosition = 0;
+        totalPoints = 0;
         teamMembers = new ArrayList<>();
     }
 
@@ -50,11 +52,11 @@ public class Team {
     public String pawnColorString() {
         switch (pawnColor) {
             case 1:
-                return  "rosu";
+                return "red";
             case 2:
-                return "albastru";
+                return "blue";
             case 3:
-                return "verde";
+                return "green";
             case 4:
                 return "yellow";
             default:

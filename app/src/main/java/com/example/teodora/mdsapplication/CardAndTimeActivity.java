@@ -64,7 +64,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
         doneButton = findViewById(R.id.doneBtn);
 
         popupBtn = findViewById(R.id.popUpBtn);
-
+        Integer integer = getIntent().getIntExtra("NumarPuncte",0);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
