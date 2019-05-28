@@ -67,7 +67,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
 
         popupBtn = findViewById(R.id.popUpBtn);
 
-
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,20 +95,28 @@ public class CardAndTimeActivity extends AppCompatActivity {
         });
 
 
+//
+//        doneButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Integer points = getIntent().getIntExtra("NumarPuncte",0);
+//
+//                AppService appService=AppService.getInstance();
+//                Team[] echipe = appService.teamsManager.getTeams();
+//                Integer currentTeam = appService.teamsManager.getCurrentTeam();
+//                echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
+//                //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
+//                echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
+//                //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
+//                System.out.println("--------------------am apasat pe DONE");
+//                finish();
+//            }
+//        });
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer points = getIntent().getIntExtra("NumarPuncte",0);
-
-                AppService appService=AppService.getInstance();
-                Team[] echipe = appService.teamsManager.getTeams();
-                Integer currentTeam = appService.teamsManager.getCurrentTeam();
-                echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
-                //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
-                echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
-                //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
-                System.out.println("--------------------am apasat pe DONE");
+                AppService.getInstance().nextTeam();
                 finish();
             }
         });
