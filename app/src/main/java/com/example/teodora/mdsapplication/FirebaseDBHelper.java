@@ -30,7 +30,7 @@ public class FirebaseDBHelper {
     public void getChalleges(final DataStatus dataStatus){
         RootReference = FirebaseDatabase.getInstance().getReference();
         ChildReference = RootReference.child("Challenges");
-        DatabaseReference DrawReference = ChildReference.child("Draw");
+        DatabaseReference DrawReference = ChildReference.child("Desene");
         DatabaseReference SpeakReference = ChildReference.child("Speak");
         DatabaseReference MimeReference = ChildReference.child("Mima");
 

@@ -7,13 +7,16 @@ public class Team {
     private String teamName;
     private int pawnColor;
     private ArrayList<String> teamMembers;
-
     private int totalPoints;
+    private int lastPosition;
     private int boardPosition;
 
-    Team() {
+    public Team() {
         teamName = "";
         pawnColor = 0;
+        boardPosition = 0;
+        lastPosition = 0;
+        totalPoints = 0;
         teamMembers = new ArrayList<>();
     }
 
@@ -31,6 +34,7 @@ public class Team {
     public String getTeamName() {
         return teamName;
     }
+
     public int getPawnColor() {
         return pawnColor;
     }
@@ -40,16 +44,30 @@ public class Team {
         return toReturn;
     }
 
+    public int getBoardPosition() {
+        return boardPosition;
+    }
 
+    public void setBoardPosition(int boardPosition) {
+        this.boardPosition = boardPosition;
+    }
+
+    public int getLastPosition() {
+        return lastPosition;
+    }
+
+    public void setLastPosition(int lastPosition) {
+        this.lastPosition = lastPosition;
+    }
 
     public String pawnColorString() {
         switch (pawnColor) {
             case 1:
-                return  "rosu";
+                return "red";
             case 2:
                 return "albastru";
             case 3:
-                return "verde";
+                return "green";
             case 4:
                 return "yellow";
             default:

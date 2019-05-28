@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.teodora.mdsapplication">
 
     <application
@@ -8,8 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".CardAndTimeActivity"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".CardAndTimeActivity">
+
+        </activity>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardAndTimeActivity"/>
+
         <activity android:name=".MenuActivity" />
       
         <activity android:name=".newgame.NewGameActivity"
             android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".leaderboard.LeaderboardActivity" />
         <activity android:name=".newgame.TeamsNumber"/>
-        <activity android:name=".newgame.MapActivity"></activity>
+        <activity android:name=".newgame.MapActivity"/>
+        <activity android:name=".FailedMessage"/>
+        <activity android:name=".FinishOrReplay" />
+        <activity android:name=".Rules.Rules1"/>
         <activity android:name=".Pop"
+
             android:theme="@style/AppTheme.CustomTheme">
         </activity>
     </application>
