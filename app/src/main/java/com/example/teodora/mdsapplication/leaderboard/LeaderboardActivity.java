@@ -30,10 +30,10 @@ public class LeaderboardActivity extends AppCompatActivity {
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
                                      List<String> mimeChallenge, List<String> echipeLeade, List<String> punctajLeade, List<String> keys) {
                 int i=0;
-                for(String echipa : mimeChallenge){
+                for(String echipa : echipeLeade){
                     if(i<challenge.size()){
                         challenge.get(i).setText(echipa);
-                        i+=3;
+                        i++;
                     }
                 }
 

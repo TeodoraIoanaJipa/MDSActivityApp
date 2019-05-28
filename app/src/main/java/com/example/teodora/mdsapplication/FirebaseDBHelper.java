@@ -30,15 +30,54 @@ public class FirebaseDBHelper {
                           List<String> mimeChallenge, List<String> echipaLeade, List<String> punctajLeade, List<String> keys);
     }
 
+
     public void getChalleges(final DataStatus dataStatus){
         RootReference = FirebaseDatabase.getInstance().getReference();
         ChildReference = RootReference.child("Challenges");
-        DatabaseReference DrawReference = ChildReference.child("Draw");
+        DatabaseReference DrawReference = ChildReference.child("Desene");
         DatabaseReference SpeakReference = ChildReference.child("Speak");
         DatabaseReference MimeReference = ChildReference.child("Mima");
 
         DatabaseReference EchipaReference = ChildReference.child("Echipa");
         DatabaseReference PunctajReference = ChildReference.child("PunctajEchipa");
+
+        EchipaReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //drawChallenges.clear();
+                List<String> keys =new ArrayList<>();
+                for (DataSnapshot keyNode: dataSnapshot.getChildren()){
+                    keys.add(keyNode.getKey());
+                    echipaLeader.add(keyNode.getValue(String.class));
+                }
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        PunctajReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //drawChallenges.clear();
+                List<String> keys =new ArrayList<>();
+                for (DataSnapshot keyNode: dataSnapshot.getChildren()){
+                    keys.add(keyNode.getKey());
+                    punctajLeader.add(keyNode.getValue(String.class));
+                }
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         DrawReference.addValueEventListener(new ValueEventListener() {
             @Override
