@@ -31,7 +31,9 @@
         <activity android:name=".newgame.MapActivity"/>
         <activity android:name=".FailedMessage"/>
         <activity android:name=".FinishOrReplay" />
+        <activity android:name=".Rules.Rules1"/>
         <activity android:name=".Pop"
+
             android:theme="@style/AppTheme.CustomTheme">
         </activity>
     </application>
