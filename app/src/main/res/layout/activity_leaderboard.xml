@@ -17,7 +17,7 @@
             android:layout_alignParentBottom="true" android:layout_marginBottom="126dp">
 
         <TextView
-                android:id="@+id/challenge1"
+                android:id="@+id/myc1"
                 android:layout_width="315dp"
                 android:layout_height="52dp"
                 android:layout_gravity="center"
@@ -26,7 +26,7 @@
                 android:textColor="@color/black"/>
 
         <TextView
-                android:id="@+id/challenge2"
+                android:id="@+id/myc2"
                 android:layout_width="315dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
@@ -35,7 +35,7 @@
                 android:textColor="@color/black"/>
 
         <TextView
-                android:id="@+id/challenge3"
+                android:id="@+id/myc3"
                 android:layout_width="315dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
@@ -44,7 +44,7 @@
                 android:textColor="@color/black"/>
 
         <TextView
-                android:id="@+id/challenge4"
+                android:id="@+id/myc4"
                 android:layout_width="315dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center"
@@ -53,7 +53,7 @@
                 android:textColor="@color/black"/>
 
         <TextView
-                android:id="@+id/challenge5"
+                android:id="@+id/myc5"
                 android:layout_width="315dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"

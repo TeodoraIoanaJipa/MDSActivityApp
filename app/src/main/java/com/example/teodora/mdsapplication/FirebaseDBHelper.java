@@ -49,6 +49,7 @@ public class FirebaseDBHelper {
                 for (DataSnapshot keyNode: dataSnapshot.getChildren()){
                     keys.add(keyNode.getKey());
                     echipaLeader.add(keyNode.getValue(String.class));
+                    System.out.println(echipaLeader.get(0));
                 }
                 dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
 

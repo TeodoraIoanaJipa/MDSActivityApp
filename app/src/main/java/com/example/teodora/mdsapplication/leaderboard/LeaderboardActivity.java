@@ -19,8 +19,8 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         final List<String> Challenges = new ArrayList<>();
         final List<TextView> challenge = new ArrayList<>(12);
-        for(int i=1;i<=6;i++){
-            String challengeStr="challenge"+i;
+        for(int i=1;i<6;i++){
+            String challengeStr="myc"+i;
             int resID = getResources().getIdentifier(challengeStr, "id", getPackageName());
             challenge.add((TextView)findViewById(resID));
         }
@@ -28,20 +28,21 @@ public class LeaderboardActivity extends AppCompatActivity {
         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
-                                     List<String> mimeChallenge, List<String> echipeLeade, List<String> punctajLeade, List<String> keys) {
+                                     List<String> mimeChallenge, List<String> echipeLeade,
+                                     List<String> punctajLeade, List<String> keys) {
                 int i=0;
                 for(String echipa : echipeLeade){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(echipa);
+                        challenge.get(i).setText(challenge.get(i).getText()+echipa);
                         i++;
                     }
                 }
 
-                i=1;
-                for(String punctaj : speakChallenge){
+                i=0;
+                for(String punctaj : punctajLeade){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(punctaj);
-                        i+=3;
+                        challenge.get(i).setText(challenge.get(i).getText()+punctaj);
+                        i++;
                     }
                 }
 
