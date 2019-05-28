@@ -29,6 +29,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+    private AppService appService = AppService.getInstance();
 
 
     public static Intent makeIntent(Context applicationContext) {
@@ -115,36 +116,41 @@ public class CardAndTimeActivity extends AppCompatActivity {
             @Override
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
                                      List<String> mimeChallenge, List<String> keys) {
+
                 int i=0;
-                for(String mima : mimeChallenge){
+                for(int j=0;j<mimeChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(mima);
+                        challenge.get(i).setText(mimeChallenge.get(j+appService.iterations));
                         i+=3;
                     }
                 }
 
                 i=1;
-                for(String speak : speakChallenge){
+                for(int j=0;j<speakChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(speak);
+                        challenge.get(i).setText(speakChallenge.get(j+appService.iterations));
                         i+=3;
                     }
                 }
 
                 i=2;
-                for(String draw : drawChallenge){
+                for(int j=0;j<drawChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(draw);
+                        challenge.get(i).setText(drawChallenge.get(j+appService.iterations));
                         i+=3;
 
                     }
                 }
+                if(appService.iterations<=15)
+                    appService.iterations+=1;
+                else
+                    appService.iterations=0;
 
             }
         });
 
-    }
 
+    }
     private void startTimer() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
@@ -186,7 +192,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
-        if (minutes == 1 && seconds == 40) {
+        if (minutes == 0 && seconds == 0) {
             Intent intent = new Intent(getApplicationContext(), FailedMessage.class);
             startActivity(intent);
             finish();
