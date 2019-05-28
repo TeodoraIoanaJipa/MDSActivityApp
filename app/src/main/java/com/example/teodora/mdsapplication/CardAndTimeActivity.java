@@ -116,7 +116,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
          new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
-                                     List<String> mimeChallenge, List<String> keys) {
+                                     List<String> mimeChallenge,List<String> echipeLeade,List<String> punctajLeade, List<String> keys) {
 
                 int i=0;
                 for(int j=0;j<mimeChallenge.size()-appService.iterations;j++){

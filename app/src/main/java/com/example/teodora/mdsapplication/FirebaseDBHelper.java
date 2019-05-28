@@ -22,17 +22,23 @@ public class FirebaseDBHelper {
     private List<String> speakChallenges = new ArrayList<>();
     private List<String> mimeChallenges = new ArrayList<>();
 
+    private List<String> echipaLeader = new ArrayList<>();
+    private List<String> punctajLeader = new ArrayList<>();
+
     public interface DataStatus{
         void dataIsLoaded(List<String>drawChallenge,List<String> speakChallenge,
-                          List<String> mimeChallenge, List<String> keys);
+                          List<String> mimeChallenge, List<String> echipaLeade, List<String> punctajLeade, List<String> keys);
     }
 
     public void getChalleges(final DataStatus dataStatus){
         RootReference = FirebaseDatabase.getInstance().getReference();
         ChildReference = RootReference.child("Challenges");
-        DatabaseReference DrawReference = ChildReference.child("Desene");
+        DatabaseReference DrawReference = ChildReference.child("Draw");
         DatabaseReference SpeakReference = ChildReference.child("Speak");
         DatabaseReference MimeReference = ChildReference.child("Mima");
+
+        DatabaseReference EchipaReference = ChildReference.child("Echipa");
+        DatabaseReference PunctajReference = ChildReference.child("PunctajEchipa");
 
         DrawReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -43,7 +49,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     drawChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
 
             }
 
@@ -62,7 +68,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     speakChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
             }
 
             @Override
@@ -79,7 +85,7 @@ public class FirebaseDBHelper {
                     keys.add(keyNode.getKey());
                     mimeChallenges.add(keyNode.getValue(String.class));
                 }
-                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges,keys);
+                dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
 
             }
 
