@@ -33,19 +33,17 @@ public class LeaderboardActivity extends AppCompatActivity {
                 int i=0;
                 for(String echipa : echipeLeade){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(challenge.get(i).getText()+echipa);
+                        challenge.get(i).setText("Locul "+ (i+1) + ": " + echipa);
                         i++;
                     }
                 }
 
-                i=0;
                 for(String punctaj : punctajLeade){
                     if(i<challenge.size()){
                         challenge.get(i).setText(challenge.get(i).getText()+punctaj);
                         i++;
                     }
                 }
-
 
             }
         });
