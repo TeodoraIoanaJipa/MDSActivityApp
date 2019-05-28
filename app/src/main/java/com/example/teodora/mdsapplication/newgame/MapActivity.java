@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
+import com.example.teodora.mdsapplication.FinishOrReplay;
 import com.example.teodora.mdsapplication.Pop;
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
@@ -24,12 +25,15 @@ public class MapActivity extends AppCompatActivity {
     private Team currentTeam;
     private CardView[] cards;
     private Context appContext;
+    private Boolean stillPlaying;
+
+    public static String winnerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-
+        stillPlaying = true;
         System.out.println("----------------Am intrat in onCreate");
         appContext = getApplicationContext();
 
@@ -166,9 +170,18 @@ public class MapActivity extends AppCompatActivity {
             }
             return;
         }
-        Intent intent = new Intent(this, Congrats.class);
-        startActivity(intent);
 
+        if(stillPlaying) {
+            stillPlaying = false;
+            Intent intent = new Intent(this, FinishOrReplay.class);
+            intent.putExtra("Winner Name", winnerName);
+            startActivity(intent);
+
+        }
+        if (stillPlaying == false) {
+            finish();
+            onDestroy();
+        }
     }
 
     public void startPlaying() throws InterruptedException {
@@ -179,6 +192,7 @@ public class MapActivity extends AppCompatActivity {
     private boolean finished(){
         for(Team oneOfTheTeams : allTeams){
             if(oneOfTheTeams.getBoardPosition()>=47) {
+                winnerName = oneOfTheTeams.getTeamName();
                 return true;
             }
         }
