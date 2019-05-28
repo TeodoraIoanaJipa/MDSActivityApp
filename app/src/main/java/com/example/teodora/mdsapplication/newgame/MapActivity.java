@@ -153,17 +153,22 @@ public class MapActivity extends AppCompatActivity {
             Integer pawnColor = allTeams[i].getPawnColor();
             Integer currentPosition = allTeams[i].getBoardPosition();
             Integer lastBoardPosition = allTeams[i].getLastPosition();
-            if(currentPosition!=lastBoardPosition)
-                setPawnVisibility(cards[lastBoardPosition], lastBoardPosition, pawnColor, false);
-            setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
-
+            if(currentPosition <=47) {
+                if (currentPosition != lastBoardPosition)
+                    setPawnVisibility(cards[lastBoardPosition], lastBoardPosition, pawnColor, false);
+                setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
 
             if (i + 1 < teamsManager.getTotalTeams())
                 teamsManager.setCurrentTeam(teamsManager.getCurrentTeam() + 1);
             else
                 teamsManager.setCurrentTeam(0);
+
+            }
             return;
         }
+        Intent intent = new Intent(getApplicationContext(), Congrats.class);
+        startActivity(intent);
+
     }
 
     public void startPlaying() throws InterruptedException {
@@ -173,11 +178,7 @@ public class MapActivity extends AppCompatActivity {
 
     private boolean finished(){
         for(Team oneOfTheTeams : allTeams){
-            if(oneOfTheTeams.getBoardPosition()==47) {
-                Intent intent = new Intent(appContext, Congrats.class);
-                startActivity(intent);
-                Intent intent2 = new Intent(appContext, LeaderboardActivity.class);
-                //cod leaderboard
+            if(oneOfTheTeams.getBoardPosition()>=47) {
                 return true;
             }
         }
