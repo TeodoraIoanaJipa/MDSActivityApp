@@ -53,7 +53,7 @@ public class MapActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-        
+
     }
 
     private void initializeCards(){
@@ -131,7 +131,7 @@ public class MapActivity extends AppCompatActivity {
 
 
     private void initializeGame(){
-        for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < 47; i++) {
             setPawnVisibility(cards[i], i, "red", false);
             setPawnVisibility(cards[i], i, "green", false);
             setPawnVisibility(cards[i], i, "blue", false);
