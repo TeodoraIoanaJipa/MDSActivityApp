@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/rulesbg">
+
+    <ImageButton
+            android:layout_width="58dp"
+            android:layout_height="59dp" app:srcCompat="@drawable/closebtn"
+            android:id="@+id/rulesCloseBtn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.976" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.AppCompat.ImageButton" android:background="@drawable/closebtn"
+            tools:srcCompat="@drawable/closebtn"/>
+    <TextView
+            android:text="Regulament"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:id="@+id/rulesTw" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintHorizontal_bias="0.457"/>
+    <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="39dp" app:srcCompat="@drawable/left_arrow"
+            android:id="@+id/leftArrowBtn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.023" android:layout_marginTop="316dp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.AppCompat.ImageButton" android:background="@drawable/left_arrow"
+            tools:srcCompat="@drawable/left_arrow"/>
+    <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="39dp" app:srcCompat="@drawable/right_arrow"
+            android:id="@+id/rightArrowBtn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.98" android:layout_marginTop="316dp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.AppCompat.ImageButton" android:background="@drawable/right_arrow"
+            tools:srcCompat="@drawable/right_arrow"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/page1"
+            android:id="@+id/textImage" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="96dp" app:layout_constraintBottom_toBottomOf="parent"
+    />
+</android.support.constraint.ConstraintLayout>
