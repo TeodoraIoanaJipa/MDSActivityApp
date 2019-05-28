@@ -37,10 +37,10 @@ public class LeaderboardActivity extends AppCompatActivity {
                         i++;
                     }
                 }
-
+                i=0;
                 for(String punctaj : punctajLeade){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(challenge.get(i).getText()+punctaj);
+                        challenge.get(i).setText(challenge.get(i).getText()+punctaj+" ");
                         i++;
                     }
                 }
