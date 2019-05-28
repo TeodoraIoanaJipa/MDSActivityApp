@@ -6,7 +6,7 @@ import android.util.DisplayMetrics;
 
 import com.example.teodora.mdsapplication.R;
 
-public class Congrats extends MapActivity {
+public class Congrats extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

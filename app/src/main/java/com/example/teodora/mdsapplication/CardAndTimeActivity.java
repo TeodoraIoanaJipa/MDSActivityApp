@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.teodora.mdsapplication.models.AppService;
 import com.example.teodora.mdsapplication.models.Team;
+import com.example.teodora.mdsapplication.newgame.Congrats;
 import com.example.teodora.mdsapplication.newgame.MapActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -108,8 +109,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
                 echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
                 //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
                 echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
+                if(echipe[currentTeam].getBoardPosition()>=47){
+                    Intent intent = new Intent(getApplicationContext(), Congrats.class);
+                    startActivity(intent);
+                    finish();
+                }
                 //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
-                System.out.println("--------------------am apasat pe DONE");
+                System.out.println("--------------------DONE");
                 finish();
             }
         });

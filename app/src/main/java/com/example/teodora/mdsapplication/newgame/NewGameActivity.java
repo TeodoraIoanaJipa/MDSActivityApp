@@ -185,8 +185,8 @@ class TopView {
 enum Pawns {
     Gray(0, R.drawable.grey_pawn, R.color.black, 0),
     Red(1, R.drawable.red_pawn, R.drawable.clicked_red_pawn, R.id.pawnSelectBtn1),
-    Green(2, R.drawable.green_pawn, R.drawable.clicked_green_pawn, R.id.pawnSelectBtn3),
-    Blue(3, R.drawable.blue_pawn, R.drawable.clicked_blue_pawn, R.id.pawnSelectBtn4),
+    Blue(2, R.drawable.blue_pawn, R.drawable.clicked_blue_pawn, R.id.pawnSelectBtn4),
+    Green(3, R.drawable.green_pawn, R.drawable.clicked_green_pawn, R.id.pawnSelectBtn3),
     Yellow(4, R.drawable.yellow_pawn, R.drawable.clicked_yellow_pawn, R.id.pawnSelectBtn2);
 
     int identifier;

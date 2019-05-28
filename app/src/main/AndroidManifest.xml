@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".newgame.Congrats"></activity>
+        <activity android:name=".newgame.Congrats" />
         <activity android:name=".MenuActivity" />
       
         <activity android:name=".newgame.NewGameActivity"

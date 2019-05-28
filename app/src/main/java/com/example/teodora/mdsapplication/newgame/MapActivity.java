@@ -57,7 +57,7 @@ public class MapActivity extends AppCompatActivity {
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
+                Intent intent = new Intent(MapActivity.this, CardAndTimeActivity.class);
                 intent.putExtra("NumarPuncte", 5);
                 startActivity(intent);
             }
@@ -166,7 +166,7 @@ public class MapActivity extends AppCompatActivity {
             }
             return;
         }
-        Intent intent = new Intent(getApplicationContext(), Congrats.class);
+        Intent intent = new Intent(this, Congrats.class);
         startActivity(intent);
 
     }
