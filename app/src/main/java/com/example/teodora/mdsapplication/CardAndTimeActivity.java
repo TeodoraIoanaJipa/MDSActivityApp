@@ -29,6 +29,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+    private AppService appService = AppService.getInstance();
 
 
     public static Intent makeIntent(Context applicationContext) {
@@ -111,37 +112,44 @@ public class CardAndTimeActivity extends AppCompatActivity {
             challenge.add((TextView)findViewById(resID));
         }
 
-        new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
+
+         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
                                      List<String> mimeChallenge, List<String> keys) {
+
                 int i=0;
-                for(String mima : mimeChallenge){
+                for(int j=0;j<mimeChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(mima);
+                        challenge.get(i).setText(mimeChallenge.get(j+appService.iterations));
                         i+=3;
                     }
                 }
 
                 i=1;
-                for(String speak : speakChallenge){
+                for(int j=0;j<speakChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(speak);
+                        challenge.get(i).setText(speakChallenge.get(j+appService.iterations));
                         i+=3;
                     }
                 }
 
                 i=2;
-                for(String draw : drawChallenge){
+                for(int j=0;j<drawChallenge.size()-appService.iterations;j++){
                     if(i<challenge.size()){
-                        challenge.get(i).setText(draw);
+                        challenge.get(i).setText(drawChallenge.get(j+appService.iterations));
                         i+=3;
 
                     }
                 }
+                if(appService.iterations<=15)
+                    appService.iterations+=1;
+                else
+                    appService.iterations=0;
 
             }
         });
+
 
     }
 
