@@ -108,7 +108,8 @@ public class CardAndTimeActivity extends AppCompatActivity {
                 echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
                 //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
                 echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
-                System.out.println("am apasat e DONE");
+                //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
+                System.out.println("--------------------am apasat pe DONE");
                 finish();
             }
         });

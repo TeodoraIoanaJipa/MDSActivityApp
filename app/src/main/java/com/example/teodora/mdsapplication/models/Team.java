@@ -64,7 +64,7 @@ public class Team {
             case 1:
                 return "red";
             case 2:
-                return "blue";
+                return "albastru";
             case 3:
                 return "green";
             case 4:

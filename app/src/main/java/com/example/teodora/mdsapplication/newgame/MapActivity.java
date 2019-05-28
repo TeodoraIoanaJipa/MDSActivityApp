@@ -26,35 +26,30 @@ public class MapActivity extends AppCompatActivity {
     private Context appContext;
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        System.out.println("------------Am intrat in onResume");
-        continueGame();
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        System.out.println("Am intrat in onCreate");
+        System.out.println("----------------Am intrat in onCreate");
         appContext = getApplicationContext();
 
-
-            //iar cu Extra punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
-
-            initializeCards();
-
-            textViewCurrentTeam = findViewById(R.id.textViewCurrentTeam);
-
-            try {
-                startPlaying();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
+        initializeCards();
+        textViewCurrentTeam = findViewById(R.id.textViewCurrentTeam);
+        try {
+            startPlaying();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("---------------Am intrat in onResume");
+        continueGame();
+    }
+
 
     private void initializeCards(){
         System.out.println("----------Am initializat cardurile");
@@ -100,27 +95,34 @@ public class MapActivity extends AppCompatActivity {
         teamsManager = appService.teamsManager;
         allTeams = teamsManager.getTeams();
     }
+    private boolean  colorAtPositionIsTaken(Integer position, Integer color){
+        for(Team team:allTeams){
+            if(team.getBoardPosition()==position && team.getPawnColor()==color)
+                return true;
+        }
+        return false;
+    }
 
-    private void setPawnVisibility(CardView card, int position, String color, Boolean visibility) {
+    private void setPawnVisibility(CardView card, int position, Integer color, Boolean visibility) {
         System.out.println("------------------Am setat vizibilitatea cardului "+position);
         String imageResource = "element" + position + "pawn";
 
-        switch (color) {
-            case "red":
-                imageResource += 1;
-                break;
-            case "blue":
-                imageResource += 2;
-                break;
-            case "green":
-                imageResource += 3;
-                break;
-            default:
-                imageResource += 1;
-                break;
+        if(color!=4){
+            imageResource+=color;
+        }else{
+            if(!colorAtPositionIsTaken(position,1))
+                imageResource+=1;
+            else
+            if(!colorAtPositionIsTaken(position,2))
+                imageResource+=2;
+            else
+                imageResource+=3;
         }
 
         int resID = card.getResources().getIdentifier(imageResource, "id", getPackageName());
+
+        if(color==4)
+            card.findViewById(resID).setBackgroundResource(R.drawable.pionas_galben);
 
         if (visibility == true)
             card.findViewById(resID).setVisibility(View.VISIBLE);
@@ -132,44 +134,41 @@ public class MapActivity extends AppCompatActivity {
 
     private void initializeGame(){
         for (int i = 0; i < 47; i++) {
-            setPawnVisibility(cards[i], i, "red", false);
-            setPawnVisibility(cards[i], i, "green", false);
-            setPawnVisibility(cards[i], i, "blue", false);
+            setPawnVisibility(cards[i], i, 1, false);
+            setPawnVisibility(cards[i], i, 2, false);
+            setPawnVisibility(cards[i], i, 3, false);
         }
     }
 
-    public void continueGame(){
+    private void continueGame() {
         int i;
-        System.out.println("Sunt in Continuegame");
+        System.out.println("------------------Sunt in Continuegame");
 
-        while(finished()==false){
-            i=teamsManager.getCurrentTeam();
-           currentTeam = allTeams[i];
-           textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
+        while (finished() == false) {
+            i = teamsManager.getCurrentTeam();
+            System.out.println("Echipa curenta : "+ i);
+            currentTeam = allTeams[i];
+            textViewCurrentTeam.setText("Turn:" + currentTeam.getTeamName());
 
-           String pawnColor = allTeams[i].pawnColorString();
-           Integer currentPosition = allTeams[i].getBoardPosition();
-           Integer lastBoardPosition = allTeams[i].getLastPosition();
-           setPawnVisibility(cards[lastBoardPosition],lastBoardPosition,pawnColor, false);
-           setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
+            Integer pawnColor = allTeams[i].getPawnColor();
+            Integer currentPosition = allTeams[i].getBoardPosition();
+            Integer lastBoardPosition = allTeams[i].getLastPosition();
+            if(currentPosition!=lastBoardPosition)
+                setPawnVisibility(cards[lastBoardPosition], lastBoardPosition, pawnColor, false);
+            setPawnVisibility(cards[currentPosition], currentPosition, pawnColor, true);
 
 
-           if(i+1<teamsManager.getTotalTeams())
-               teamsManager.setCurrentTeam(teamsManager.getCurrentTeam()+1);
-           else
-               teamsManager.setCurrentTeam(0);
-           return;
+            if (i + 1 < teamsManager.getTotalTeams())
+                teamsManager.setCurrentTeam(teamsManager.getCurrentTeam() + 1);
+            else
+                teamsManager.setCurrentTeam(0);
+            return;
         }
     }
 
     public void startPlaying() throws InterruptedException {
-        System.out.println("Sunt in startPlaying");
 
         initializeGame();
-
-        int i=0;
-
-        continueGame();
     }
 
     private boolean finished(){

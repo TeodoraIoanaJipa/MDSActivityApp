@@ -100,7 +100,6 @@ public class NewGameActivity extends Activity {
                         saveTeamInfos();
                         if(currentTeamOrdinal == appService.teamsManager.getTotalTeams()){
                             Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-                            intent.putExtra("caller","newgame");
                             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             onDestroy();
@@ -119,6 +118,7 @@ public class NewGameActivity extends Activity {
 
     void saveTeamInfos() {
         currentTeam.setTeamName(String.valueOf(teamName.getText()));
+        System.out.println("----------------Selected pawn: "+pawnButtons.getSelectedPawn());
         currentTeam.setPawnColor(pawnButtons.getSelectedPawn());
         currentTeam.setTeamMembers(teamMembersInput.getMembersList());
     }
@@ -185,9 +185,9 @@ class TopView {
 enum Pawns {
     Gray(0, R.drawable.grey_pawn, R.color.black, 0),
     Red(1, R.drawable.red_pawn, R.drawable.clicked_red_pawn, R.id.pawnSelectBtn1),
-    Yellow(2, R.drawable.yellow_pawn, R.drawable.clicked_yellow_pawn, R.id.pawnSelectBtn2),
-    Green(3, R.drawable.green_pawn, R.drawable.clicked_green_pawn, R.id.pawnSelectBtn3),
-    Blue(4, R.drawable.blue_pawn, R.drawable.clicked_blue_pawn, R.id.pawnSelectBtn4);
+    Green(2, R.drawable.green_pawn, R.drawable.clicked_green_pawn, R.id.pawnSelectBtn3),
+    Blue(3, R.drawable.blue_pawn, R.drawable.clicked_blue_pawn, R.id.pawnSelectBtn4),
+    Yellow(4, R.drawable.yellow_pawn, R.drawable.clicked_yellow_pawn, R.id.pawnSelectBtn2);
 
     int identifier;
     int defaultDrawableID;
