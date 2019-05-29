@@ -1,5 +1,7 @@
 package com.example.teodora.mdsapplication.models;
 
+import java.util.ArrayList;
+
 public class TeamsManager {
     private int totalTeams;
     private int currentTeam = 0;
@@ -31,10 +33,11 @@ public class TeamsManager {
         return true;
     }
 
-    int[] getTeamModels() {
-        int[] models = new int[teams.length];
-        for (int ind = 0; ind < teams.length; ind++) {
-            models[ind] = Pawns.values()[teams[ind].getPawnColor()].getBoardPawnDrawableID();
+    ArrayList<Integer> getTeamModels() {
+        ArrayList<Integer> models = new ArrayList<>();
+        for (Team team : teams) {
+            models.add(Pawns.values()[team.getPawnColor()].
+                    getBoardPawnDrawableID());
         }
         return models;
     }

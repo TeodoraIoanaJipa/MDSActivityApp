@@ -1,14 +1,14 @@
 package com.example.teodora.mdsapplication.models;
 
-import javax.xml.transform.stream.StreamSource;
+import java.util.ArrayList;
 
 public class MapSituation {
     String currentTeam;
     String curremtMember;
     int pawnMascotRez;
 
-    int[] pawnModels;
-    int[] positions;
+    ArrayList<Integer> pawnModels;
+    ArrayList<Integer> positions;
 
     int indToChange;
     int pozToChange;
@@ -17,18 +17,19 @@ public class MapSituation {
 
     public MapSituation() {
         this.curremtMember = this.currentTeam = "";
-        this.pawnModels = this.positions = new int[0];
+        this.pawnModels = new ArrayList<>();
+        this.positions = new ArrayList<>();
         this.pawnMascotRez = this.indToChange = this.pozToChange = this.nrOfTeams = 0;
     }
 
 
-    public void setTeamsModels(int[] pawnModels) {
-        this.pawnModels = pawnModels.clone();
-        this.positions = new int[pawnModels.length];
-        for (int ind = 0; ind < pawnModels.length; ind++) {
-            this.positions[ind] = 0;
+    public void setTeamsModels(ArrayList<Integer> pawnModels) {
+        this.pawnModels = pawnModels;
+        this.positions = new ArrayList<>();
+        for (int ind = 0; ind < pawnModels.size(); ind++) {
+            this.positions.add(0);
         }
-        nrOfTeams = pawnModels.length;
+        nrOfTeams = pawnModels.size();
     }
 
     public void rewardTeam(int team, int points) {
@@ -42,21 +43,6 @@ public class MapSituation {
         pawnMascotRez = Pawns.values()[theTeam.getPawnColor()].getDefaultDrawableID();
     }
 
-    @Override
-    protected MapSituation clone() throws CloneNotSupportedException {
-        MapSituation toReturn = new MapSituation();
-
-        toReturn.currentTeam = currentTeam;
-        toReturn.curremtMember = curremtMember;
-        toReturn.pawnModels = pawnModels.clone();
-        toReturn.positions = positions.clone();
-        toReturn.indToChange = indToChange;
-        toReturn.pozToChange = pozToChange;
-        toReturn.nrOfTeams = nrOfTeams;
-
-        return toReturn;
-    }
-
     public String getMember() {
         return this.curremtMember;
     }
@@ -67,5 +53,25 @@ public class MapSituation {
 
     public int getPawnMascotRez() {
         return pawnMascotRez;
+    }
+
+    public int getIndToChange() {
+        return indToChange;
+    }
+
+    public int getPozToChange() {
+        return pozToChange;
+    }
+
+    public ArrayList<Integer> getPositions() {
+        return positions;
+    }
+
+    public void setPositions(ArrayList<Integer> positions) {
+        this.positions = positions;
+    }
+
+    public ArrayList<Integer> getPawnModel() {
+        return pawnModels;
     }
 }

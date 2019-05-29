@@ -3,6 +3,7 @@ package com.example.teodora.mdsapplication.newgame;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import android.widget.ThemedSpinnerAdapter;
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
 import com.example.teodora.mdsapplication.Pop;
 import com.example.teodora.mdsapplication.R;
@@ -20,35 +22,43 @@ import com.example.teodora.mdsapplication.models.*;
 
 import javax.xml.transform.stream.StreamSource;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Map;
+import java.util.function.Consumer;
 
 import static android.content.ContentValues.TAG;
 
 public class MapActivity extends AppCompatActivity {
     static final int NR_OF_SQUARES = 47;
+    static final int MILLIS_FOR_STEOP_DELAY = 500;
     private CardView cardView3, cardView4, cardView5;
     private AppService appService = AppService.getInstance();
     private TextView currTeam;
     private TextView currMember;
     private ImageView pawnMascot;
+    private BoardManager rectangManager;
+    static boolean gameOver = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         importElements();
-        BoardManager rectangManager = new BoardManager(this);
-
+        rectangManager = new BoardManager(this);
+        rectangManager.initialDraw(appService.getMapSituation().getPawnModel());
         loadMap();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadMap();
+        updateBoard();
     }
 
-    void loadMap() {
+    private void loadMap() {
         MapSituation situation = appService.getMapSituation();
 
         currTeam.setText(situation.getTeam());
@@ -57,13 +67,30 @@ public class MapActivity extends AppCompatActivity {
 
     }
 
-    void importElements() {
+    void updateBoard() {
+        rectangManager.setModifiers(appService.getMapSituation());
+        rectangManager.updateBoard();
+        AppService.getInstance().nextTeam();
+        loadMap();
+
+        if(gameOver) {
+            pawnMascot.setImageResource(Pawns.Gray.getDefaultDrawableID());
+            View.OnClickListener empty =  (v) -> {};
+            cardView3.setOnClickListener(empty);
+            cardView4.setOnClickListener(empty);
+            cardView5.setOnClickListener(empty);
+
+        }
+    }
+
+    private void importElements() {
         currTeam = findViewById(R.id.textViewCurrentTeam);
         currMember = findViewById(R.id.textViewCurrentMember);
         pawnMascot = findViewById(R.id.teamMascotImg);
         cardView3 = findViewById(R.id.Card3);
         cardView4 = findViewById(R.id.Card4);
         cardView5 = findViewById(R.id.Card5);
+
 
         cardView3.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), CardAndTimeActivity.class);
@@ -80,16 +107,46 @@ public class MapActivity extends AppCompatActivity {
             intent.putExtra("NumarPuncte", 5);
             startActivity(intent);
         });
+//
+//        cardView3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AppService.getInstance().nextTeam();
+//                updateBoard();
+//            }
+//        });
+//
+//        cardView4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AppService.getInstance().getMapSituation().rewardTeam(
+//                        AppService.getInstance().teamsManager.getCurrentTeam(),
+//                        3
+//                );
+//                updateBoard();
+//            }
+//        });
+//
+//        cardView5.setOnClickListener((v) -> rectangManager.clearOld());
+
     }
 }
 
 
 class BoardManager{
-    Activity context;
-    ArrayList<BoardRectangle> rectangles;
+    private ArrayList<BoardRectangle> rectangles;
+
+    private ArrayList<Integer> positions;
+    private ArrayList<Integer> models;
+    private int indToChange;
+    private int pozToChange;
 
     BoardManager(Activity context) {
-        this.context = context;
+        positions = new ArrayList<>();
+        models = new ArrayList<>();
+
+        indToChange = pozToChange = 0;
+
         rectangles = new ArrayList<>();
 
         for (int ind = 0; ind < MapActivity.NR_OF_SQUARES; ind++) {
@@ -97,17 +154,70 @@ class BoardManager{
             rectangles.add(newReact);
         }
     }
+
+    void initialDraw(ArrayList<Integer> models) {
+        this.models = models;
+        BoardRectangle first = rectangles.get(0);
+        for (int ind = 0; ind < models.size(); ind++) {
+            first.pushPawn(models.get(ind));
+        }
+    }
+
+    void setModifiers(MapSituation situation) {
+        positions = situation.getPositions();
+        indToChange = situation.getIndToChange();
+        pozToChange = situation.getPozToChange();
+    }
+
+    void updateBoard() {
+        if(pozToChange == 0) return;
+        clearOld();
+        int newPoz = positions.get(indToChange) + pozToChange;
+        if(newPoz >= MapActivity.NR_OF_SQUARES) {
+            MapActivity.gameOver = true;
+            newPoz = MapActivity.NR_OF_SQUARES - 1;
+        }
+        for (int ind = 0; ind < positions.size(); ind++) {
+            if(positions.get(ind) == newPoz)
+                positions.set(ind, positions.get(ind) - 1);
+        }
+        positions.set(indToChange, newPoz);
+        drawNew();
+        export();
+    }
+
+    void export() {
+        MapSituation situation = AppService.getInstance().getMapSituation();
+        situation.setPositions(positions);
+        situation.rewardTeam(AppService.getInstance().teamsManager.getCurrentTeam(), 0);
+    }
+
+    void clearOld() {
+        for (BoardRectangle rec:rectangles) {
+            rec.clear();
+        }
+    }
+
+    void drawNew() {
+        for (int ind = 0; ind < positions.size(); ind++) {
+            rectangles.get(positions.get(ind)).pushPawn(models.get(ind));
+        }
+    }
+
+
+
+
 }
 
 class BoardRectangle {
     ImageView[] images = new ImageView[3];
     Integer[] imageRez = new Integer[3];
-    static final String sayElem = "element";
-    static final String sayPawn = "pawn";
-    Activity context;
+
 
     BoardRectangle(Activity context, int elementOrdinal) {
-        this.context = context;
+        String sayElem = "element";
+        String sayPawn = "pawn";
+
         String rootName = sayElem + elementOrdinal;
         for (int ind = 0; ind < 3; ind++) {
             int nr = ind + 1;
@@ -122,27 +232,52 @@ class BoardRectangle {
         drawImages();
     }
 
+    void clear() {
+        Arrays.fill(imageRez, 0);
+        drawImages();
+    }
+
     private void drawImages() {
-        for (int ind = 0; ind < 3; ind++) {
+        for (int ind = 0; ind < images.length; ind++) {
             images[ind].setImageResource(
                     imageRez[ind]
             );
         }
     }
 
-    void pushPawn(int ID) {
+    void pushPawn(int pawnRez) {
         imageRez[2] = imageRez[1];
         imageRez[1] = imageRez[0];
-        imageRez[0] = Pawns.values()[ID].getBoardPawnDrawableID();
+        imageRez[0] = pawnRez;
         drawImages();
     }
 
-    void popPawn() {
-        imageRez[0] = imageRez[1];
-        imageRez[1] = imageRez[2];
-        imageRez[2] = 0;
-        drawImages();
-    }
+//    int popPawn() {
+//        for (int ind = 2; ind >= 0; ind--)
+//            if(imageRez[ind] != 0) {
+//                int toReturn = imageRez[ind];
+//                imageRez[ind] = 0;
+//                drawImages();
+//                return toReturn;
+//            }
+//        return 0;
+//    }
+//
+//    int popPawn(int rezID) {
+//        if(imageRez[0] == rezID) {
+//            imageRez[0] = imageRez[1];
+//            imageRez[1] = imageRez[2];
+//            imageRez[2] = 0;
+//        } else if(imageRez[1] == rezID) {
+//            imageRez[1] = imageRez[2];
+//            imageRez[2] = 0;
+//        } else if(imageRez[2] == rezID) {
+//            imageRez[2] = 0;
+//        } else return 0;
+//
+//        drawImages();
+//        return rezID;
+//    }
 
 
 

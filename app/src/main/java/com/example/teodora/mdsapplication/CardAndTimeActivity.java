@@ -46,7 +46,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
-
     public static Intent makeIntent(Context applicationContext) {
         Intent intent = new Intent(applicationContext, CardAndTimeActivity.class);
         return intent;
@@ -113,10 +112,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
 //            }
 //        });
 
+        Integer points = getIntent().getIntExtra("NumarPuncte",0);
+        rewardTeam(0);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppService.getInstance().nextTeam();
+                rewardTeam(points);
+                System.out.println("REWARDING " + points + " POINTS ");
                 finish();
             }
         });
@@ -161,6 +163,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    protected void rewardTeam(int amount) {
+        AppService.getInstance().getMapSituation().rewardTeam(
+                AppService.getInstance().teamsManager.getCurrentTeam(),
+                amount
+        );
     }
 
     private void startTimer() {
