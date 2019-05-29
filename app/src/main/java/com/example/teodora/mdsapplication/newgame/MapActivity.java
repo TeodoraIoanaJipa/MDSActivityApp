@@ -175,6 +175,7 @@ public class MapActivity extends AppCompatActivity {
             stillPlaying = false;
             Intent intent = new Intent(this, FinishOrReplay.class);
             intent.putExtra("Winner Name", winnerName);
+
             startActivity(intent);
 
         }

@@ -112,10 +112,11 @@ public class CardAndTimeActivity extends AppCompatActivity {
             challenge.add((TextView)findViewById(resID));
         }
 
-        new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
+
+         new FirebaseDBHelper().getChalleges(new FirebaseDBHelper.DataStatus() {
             @Override
             public void dataIsLoaded(List<String> drawChallenge,List<String> speakChallenge,
-                                     List<String> mimeChallenge, List<String> keys) {
+                                     List<String> mimeChallenge,List<String> echipeLeade,List<String> punctajLeade, List<String> keys) {
 
                 int i=0;
                 for(int j=0;j<mimeChallenge.size()-appService.iterations;j++){
@@ -147,10 +148,11 @@ public class CardAndTimeActivity extends AppCompatActivity {
                     appService.iterations=0;
 
             }
-        });
+        },appService.winnerName);
 
 
     }
+
     private void startTimer() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
@@ -192,7 +194,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
         String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormatted);
-        if (minutes == 0 && seconds == 0) {
+        if (minutes == 1 && seconds == 40) {
             Intent intent = new Intent(getApplicationContext(), FailedMessage.class);
             startActivity(intent);
             finish();

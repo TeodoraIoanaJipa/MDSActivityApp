@@ -1,16 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".leaderboard.LeaderboardActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background16"
+              android:weightSum="10"
+              tools:context=".StartActivity">
 
-    <ListView
-        android:id="@+id/ScorEchipeListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints" />
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="283dp"
+            android:layout_gravity="center"
+            android:orientation="vertical" android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="126dp">
+
+        <TextView
+                android:id="@+id/myc1"
+                android:layout_width="315dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:text="Locul 1:"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/myc2"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+
+                android:text="Locul 2:"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/myc3"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+
+                android:text="Locul 3:"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/myc4"
+                android:layout_width="315dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+
+                android:text="Locul 4:"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/myc5"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+
+                android:text="Locul 5:"
+                android:textColor="@color/black"/>
+
+    </LinearLayout>
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_height="139dp"
+            app:srcCompat="@drawable/leaderboard"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:baselineAlignBottom="false" android:layout_width="164dp"/>
+
+
+</RelativeLayout>
