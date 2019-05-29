@@ -177,7 +177,55 @@ class TopView {
 
 }
 
-
+//
+//<<<<<<< HEAD
+//=======
+///*
+// Enum that stores the order number of each pawn color,
+//    the drawable model ID and the view model layout ID
+//    set in the xml file
+// */
+//enum Pawns {
+//    Gray(0, R.drawable.grey_pawn, R.color.black, 0),
+//    Red(1, R.drawable.red_pawn, R.drawable.clicked_red_pawn, R.id.pawnSelectBtn1),
+//    Blue(2, R.drawable.blue_pawn, R.drawable.clicked_blue_pawn, R.id.pawnSelectBtn4),
+//    Green(3, R.drawable.green_pawn, R.drawable.clicked_green_pawn, R.id.pawnSelectBtn3),
+//    Yellow(4, R.drawable.yellow_pawn, R.drawable.clicked_yellow_pawn, R.id.pawnSelectBtn2);
+//
+//    int identifier;
+//    int defaultDrawableID;
+//    int clickedDrawableID;
+//    int layoutResourceID;
+//
+//    Pawns(int identifier, int defaultDrawableID, int clickedDrawableID, int layoutResourceID) {
+//        this.identifier = identifier;
+//        this.defaultDrawableID = defaultDrawableID;
+//        this.clickedDrawableID = clickedDrawableID;
+//        this.layoutResourceID = layoutResourceID;
+//
+//    }
+//
+//    public int getLayoutResourceID() {
+//        return layoutResourceID;
+//    }
+//
+//    public int getDefaultDrawableID(){
+//        return defaultDrawableID;
+//    }
+//
+//    public int getClickedDrawableID() {
+//        return clickedDrawableID;
+//    }
+//
+//    public int getID() {
+//        return identifier;
+//    }
+//
+//    static public int size() {
+//        return  4;
+//    }
+//}
+//>>>>>>> master
 
 /**
  *

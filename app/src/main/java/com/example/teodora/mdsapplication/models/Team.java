@@ -35,6 +35,7 @@ public class Team {
     public String getTeamName() {
         return teamName;
     }
+
     public int getPawnColor() {
         return pawnColor;
     }

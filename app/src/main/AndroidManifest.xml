@@ -22,15 +22,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".newgame.Congrats"></activity>
         <activity android:name=".MenuActivity" />
       
         <activity android:name=".newgame.NewGameActivity"
             android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".leaderboard.LeaderboardActivity" />
         <activity android:name=".newgame.TeamsNumber"/>
-        <activity android:name=".newgame.MapActivity"></activity>
+        <activity android:name=".newgame.MapActivity"/>
+        <activity android:name=".FailedMessage"/>
+        <activity android:name=".FinishOrReplay" />
+        <activity android:name=".Rules.Rules1"/>
         <activity android:name=".Pop"
+
             android:theme="@style/AppTheme.CustomTheme">
         </activity>
     </application>

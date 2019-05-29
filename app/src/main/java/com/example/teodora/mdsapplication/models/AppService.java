@@ -4,7 +4,7 @@ import com.example.teodora.mdsapplication.newgame.MapActivity;
 
 public class AppService {
     private static AppService instance = null;
-
+    public Integer iterations=0;
     public TeamsManager teamsManager;
     private MapSituation mapSituation;
 

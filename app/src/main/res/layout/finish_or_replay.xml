@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/finish_or_replay"
+                android:weightSum="10"
+                tools:context=".StartActivity">
+
+
+    <Button
+            android:text="Reincepe jocul"
+            android:layout_width="160dp"
+            android:layout_height="78dp" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="166dp" android:layout_alignParentEnd="true" android:layout_marginEnd="127dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="124dp" android:id="@+id/playAgainBtn"/>
+    <TextView
+            android:text="Felicitari echipei: "
+            android:layout_width="344dp"
+            android:layout_height="124dp" android:id="@+id/textView13" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="460dp" android:layout_alignParentEnd="true" android:layout_marginEnd="21dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+    <TextView
+            android:layout_width="224dp"
+            android:layout_height="101dp" android:id="@+id/winnerTW"
+            android:layout_alignParentStart="true" android:layout_marginStart="32dp"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="320dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+</RelativeLayout>

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import android.widget.ThemedSpinnerAdapter;
 import com.example.teodora.mdsapplication.CardAndTimeActivity;
+import com.example.teodora.mdsapplication.FinishOrReplay;
 import com.example.teodora.mdsapplication.Pop;
 import com.example.teodora.mdsapplication.R;
 import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
@@ -36,20 +37,47 @@ public class MapActivity extends AppCompatActivity {
     static final int MILLIS_FOR_STEOP_DELAY = 500;
     private CardView cardView3, cardView4, cardView5;
     private AppService appService = AppService.getInstance();
+//<<<<<<< HEAD
     private TextView currTeam;
     private TextView currMember;
     private ImageView pawnMascot;
     private BoardManager rectangManager;
     static boolean gameOver = false;
+//=======
+//    private TeamsManager teamsManager;
+//    private Team[] allTeams;
+//    private TextView textViewCurrentTeam;
+//    private Team currentTeam;
+//    private CardView[] cards;
+//    private Context appContext;
+//    private Boolean stillPlaying;
+//
+//    public static String winnerName;
+//>>>>>>> master
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+//<<<<<<< HEAD
         importElements();
         rectangManager = new BoardManager(this);
         rectangManager.initialDraw(appService.getMapSituation().getPawnModel());
         loadMap();
+//=======
+//        stillPlaying = true;
+//        System.out.println("----------------Am intrat in onCreate");
+//        appContext = getApplicationContext();
+//
+//        initializeCards();
+//        textViewCurrentTeam = findViewById(R.id.textViewCurrentTeam);
+//        try {
+//            startPlaying();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//>>>>>>> master
     }
 
     @Override
@@ -64,8 +92,22 @@ public class MapActivity extends AppCompatActivity {
         appService.resetGame();
     }
 
+//<<<<<<< HEAD
     private void loadMap() {
         MapSituation situation = appService.getMapSituation();
+//=======
+//    private void initializeCards(){
+//        System.out.println("----------Am initializat cardurile");
+//        CardView card5 = findViewById(R.id.Card5);
+//        card5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MapActivity.this, CardAndTimeActivity.class);
+//                intent.putExtra("NumarPuncte", 5);
+//                startActivity(intent);
+//            }
+//        });
+//>>>>>>> master
 
         currTeam.setText(situation.getTeam());
         currMember.setText(situation.getMember());
@@ -202,11 +244,25 @@ class BoardManager{
         for (BoardRectangle rec:rectangles) {
             rec.clear();
         }
+//<<<<<<< HEAD
     }
 
     void drawNew() {
         for (int ind = 0; ind < positions.size(); ind++) {
             rectangles.get(positions.get(ind)).pushPawn(models.get(ind));
+//=======
+//
+//        if(stillPlaying) {
+//            stillPlaying = false;
+//            Intent intent = new Intent(this, FinishOrReplay.class);
+//            intent.putExtra("Winner Name", winnerName);
+//            startActivity(intent);
+//
+//        }
+//        if (stillPlaying == false) {
+//            finish();
+//            onDestroy();
+//>>>>>>> master
         }
     }
 
@@ -243,11 +299,20 @@ class BoardRectangle {
         drawImages();
     }
 
+//<<<<<<< HEAD
     private void drawImages() {
         for (int ind = 0; ind < images.length; ind++) {
             images[ind].setImageResource(
                     imageRez[ind]
             );
+//=======
+//    private boolean finished(){
+//        for(Team oneOfTheTeams : allTeams){
+//            if(oneOfTheTeams.getBoardPosition()>=47) {
+//                winnerName = oneOfTheTeams.getTeamName();
+//                return true;
+//            }
+//>>>>>>> master
         }
     }
 
