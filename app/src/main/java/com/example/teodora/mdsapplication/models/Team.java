@@ -103,4 +103,8 @@ public class Team {
     public void setTotalPoints(int totalPoints) {
         this.totalPoints = totalPoints;
    }
+
+    public void setCurrentMember(int currentMember) {
+        this.currentMember = currentMember;
+    }
 }

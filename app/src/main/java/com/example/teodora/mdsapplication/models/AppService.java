@@ -1,5 +1,7 @@
 package com.example.teodora.mdsapplication.models;
 
+import com.example.teodora.mdsapplication.newgame.MapActivity;
+
 public class AppService {
     private static AppService instance = null;
 
@@ -24,6 +26,12 @@ public class AppService {
             mapSituation.setTeamsModels(teamsManager.getTeamModels());
         }
         return mapSituation;
+    }
+
+    public void resetGame() {
+        mapSituation = null;
+        teamsManager.setCurrentTeam(0);
+        teamsManager.resetCurrentMembers();
     }
 
     public void nextTeam() {

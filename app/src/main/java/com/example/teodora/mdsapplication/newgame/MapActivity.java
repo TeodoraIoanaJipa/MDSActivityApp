@@ -58,6 +58,12 @@ public class MapActivity extends AppCompatActivity {
         updateBoard();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        appService.resetGame();
+    }
+
     private void loadMap() {
         MapSituation situation = appService.getMapSituation();
 

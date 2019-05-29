@@ -63,4 +63,9 @@ public class TeamsManager {
         return currentTeam;
     }
 
+    public void resetCurrentMembers() {
+        for(Team team : teams)
+            team.setCurrentMember(0);
+    }
+
 }
