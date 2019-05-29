@@ -23,7 +23,7 @@ public class Rules1 extends Activity {
         closeBtn = findViewById(R.id.rulesCloseBtn);
         text = findViewById(R.id.textImage);
         pageNumber = 1;
-        maxPageNumber = 6;
+        maxPageNumber = 7;
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
