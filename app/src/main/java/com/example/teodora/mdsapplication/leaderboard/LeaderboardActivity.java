@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import com.example.teodora.mdsapplication.FirebaseDBHelper;
 import com.example.teodora.mdsapplication.R;
+import com.example.teodora.mdsapplication.models.AppService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class LeaderboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
+        AppService appService = AppService.getInstance();
         final List<String> Challenges = new ArrayList<>();
         final List<TextView> challenge = new ArrayList<>(12);
         for(int i=1;i<6;i++){
@@ -46,7 +48,7 @@ public class LeaderboardActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        },appService.winnerName);
     }
 
 

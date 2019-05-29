@@ -13,6 +13,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class FirebaseDBHelper {
 
@@ -31,7 +32,7 @@ public class FirebaseDBHelper {
     }
 
 
-    public void getChalleges(final DataStatus dataStatus){
+    public void getChalleges(final DataStatus dataStatus, final String name){
         RootReference = FirebaseDatabase.getInstance().getReference();
         ChildReference = RootReference.child("Challenges");
         DatabaseReference DrawReference = ChildReference.child("Desene");
@@ -40,6 +41,21 @@ public class FirebaseDBHelper {
 
         DatabaseReference EchipaReference = ChildReference.child("Echipa");
         DatabaseReference PunctajReference = ChildReference.child("PunctajEchipa");
+
+        ChildReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Random rand = new Random();
+                int n = rand.nextInt(50);
+                ChildReference.child("Echipa").child("key"+n).setValue(name);
+                ChildReference.child("PunctajEchipa").child("key"+n);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         EchipaReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -71,7 +87,7 @@ public class FirebaseDBHelper {
                     punctajLeader.add(keyNode.getValue(String.class));
                 }
                 dataStatus.dataIsLoaded(drawChallenges,speakChallenges,mimeChallenges, echipaLeader, punctajLeader,keys);
-
+                System.out.println("--------------------");
             }
 
             @Override

@@ -8,6 +8,7 @@ import android.view.View;
 
 import android.widget.ImageView;
 import com.example.teodora.mdsapplication.Rules.Rules1;
+import com.example.teodora.mdsapplication.leaderboard.LeaderboardActivity;
 import com.example.teodora.mdsapplication.newgame.TeamsNumber;
 
 public class MenuActivity extends AppCompatActivity {
@@ -45,8 +46,8 @@ public class MenuActivity extends AppCompatActivity {
         leaderboardCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), Congrats.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), LeaderboardActivity.class);
+               startActivity(intent);
 
             }
         });

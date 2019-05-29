@@ -148,7 +148,7 @@ public class CardAndTimeActivity extends AppCompatActivity {
                     appService.iterations=0;
 
             }
-        });
+        },appService.winnerName);
 
 
     }
