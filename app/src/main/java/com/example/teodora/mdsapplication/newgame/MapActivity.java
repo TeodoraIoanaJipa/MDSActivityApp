@@ -122,12 +122,9 @@ public class MapActivity extends AppCompatActivity {
         loadMap();
 
         if(gameOver) {
-            pawnMascot.setImageResource(Pawns.Gray.getDefaultDrawableID());
-            View.OnClickListener empty =  (v) -> {};
-            cardView3.setOnClickListener(empty);
-            cardView4.setOnClickListener(empty);
-            cardView5.setOnClickListener(empty);
-
+            Intent intent = new Intent(this, FinishOrReplay.class);
+            intent.putExtra("Winner Name", currTeam.getText());
+            startActivity(intent);
         }
     }
 
