@@ -30,7 +30,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
-
     public static Intent makeIntent(Context applicationContext) {
         Intent intent = new Intent(applicationContext, CardAndTimeActivity.class);
         return intent;
@@ -50,7 +49,6 @@ public class CardAndTimeActivity extends AppCompatActivity {
         doneButton = findViewById(R.id.doneBtn);
 
         popupBtn = findViewById(R.id.popUpBtn);
-
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,25 +78,49 @@ public class CardAndTimeActivity extends AppCompatActivity {
         });
 
 
+//
+//        doneButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Integer points = getIntent().getIntExtra("NumarPuncte",0);
+//
+//                AppService appService=AppService.getInstance();
+//                Team[] echipe = appService.teamsManager.getTeams();
+//                Integer currentTeam = appService.teamsManager.getCurrentTeam();
+//                echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
+//                //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
+//                echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
+//                //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
+//                System.out.println("--------------------am apasat pe DONE");
+//                finish();
+//            }
+//        });
 
+        Integer points = getIntent().getIntExtra("NumarPuncte",0);
+        rewardTeam(0);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer points = getIntent().getIntExtra("NumarPuncte",0);
+// <<<<<<< master
+//                 Integer points = getIntent().getIntExtra("NumarPuncte",0);
 
-                AppService appService=AppService.getInstance();
-                Team[] echipe = appService.teamsManager.getTeams();
-                Integer currentTeam = appService.teamsManager.getCurrentTeam();
-                echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
-                //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
-                echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
-                if(echipe[currentTeam].getBoardPosition()>=47){
-//                    Intent intent = new Intent(getApplicationContext(), Congrats.class);
-//                    startActivity(intent);
-                    finish();
-                }
-                //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
-                System.out.println("--------------------DONE");
+//                 AppService appService=AppService.getInstance();
+//                 Team[] echipe = appService.teamsManager.getTeams();
+//                 Integer currentTeam = appService.teamsManager.getCurrentTeam();
+//                 echipe[currentTeam].setLastPosition(echipe[currentTeam].getBoardPosition());
+//                 //avem nevoie si de ultima casuta pe care s-a aflat ca sa putem sa i setam vizibilitatea la false
+//                 echipe[currentTeam].setBoardPosition(echipe[currentTeam].getBoardPosition()+points);
+//                 if(echipe[currentTeam].getBoardPosition()>=47){
+// //                    Intent intent = new Intent(getApplicationContext(), Congrats.class);
+// //                    startActivity(intent);
+//                     finish();
+//                 }
+//                 //adun punctele pe care le-a acumulat echipa curenta ca sa pot sa o deplasez la dreapta
+//                 System.out.println("--------------------DONE");
+// =======
+                rewardTeam(points);
+                System.out.println("REWARDING " + points + " POINTS ");
+// >>>>>>> MapTesting
                 finish();
             }
         });
@@ -143,6 +165,13 @@ public class CardAndTimeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    protected void rewardTeam(int amount) {
+        AppService.getInstance().getMapSituation().rewardTeam(
+                AppService.getInstance().teamsManager.getCurrentTeam(),
+                amount
+        );
     }
 
     private void startTimer() {

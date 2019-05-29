@@ -7,6 +7,7 @@ public class Team {
     private String teamName;
     private int pawnColor;
     private ArrayList<String> teamMembers;
+    private int currentMember = 0;
     private int totalPoints;
     private int lastPosition;
     private int boardPosition;
@@ -85,5 +86,26 @@ public class Team {
         stringBuffer.append(" | Number of members: ");
         stringBuffer.append(teamMembers.size());
         return String.valueOf(stringBuffer);
+    }
+
+    public int nextMember() {
+        currentMember = (currentMember + 1) % teamMembers.size();
+        return currentMember;
+    }
+
+    public int getCurrentMember() {
+        return currentMember;
+    }
+
+    public int getTotalPoints() {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(int totalPoints) {
+        this.totalPoints = totalPoints;
+   }
+
+    public void setCurrentMember(int currentMember) {
+        this.currentMember = currentMember;
     }
 }
