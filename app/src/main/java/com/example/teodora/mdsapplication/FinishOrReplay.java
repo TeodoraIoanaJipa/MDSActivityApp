@@ -26,6 +26,8 @@ public class FinishOrReplay extends MenuActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
+                finish();
+                onDestroy();
             }
         });
 
